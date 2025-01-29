@@ -1,0 +1,970 @@
+html {
+    scroll-padding-top: 100px; /* Adjust based on the height of your AppBar */
+  }
+  
+ @media (max-width: 768px) {
+    html {
+      scroll-padding-top: 150px; /* Adjust this value based on your AppBar height for mobile */
+    }
+  }
+
+
+
+body #root  {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #090909;
+  
+   
+   
+}
+
+
+header {
+    background: #090909;
+    color: #2abbe467;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    color: #2abbe467;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 35px;
+   margin-bottom: 55px;
+  
+}
+@media (max-width: 768px) { /* Adjust the max-width value based on your breakpoint */
+    h2 {
+        font-size: 30px; /* Smaller font size for mobile */
+        margin-bottom: 35px; /* Reduced margin for better spacing */
+    }
+}
+
+#hero {
+    height: 100vh;
+    background: url('./img/pc1.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+/* Use a different background for smaller screens */
+@media (max-width: 768px) {
+    #hero {
+        background: url('./img/pc1.png') no-repeat center center/cover;
+       height: 300px;
+      
+    }
+}
+
+
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 350px;
+
+}
+@media (max-width: 768px) {
+    #hero .container  {
+        position: relative;
+        z-index: 1;
+        padding-top: 160px;
+      
+    }
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
+
+#hero p {
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+@media (max-width: 768px) {
+    #hero p { 
+         font-size: 12px;
+         margin: 0 0 20px;
+  
+       
+      
+    }
+}
+
+
+#hero .btn {
+    background: #00bfff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+@media (max-width:768px ){
+  #hero .btn  {
+    background: #00bfff;
+    color: #fff;
+    padding: 7px 7px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 10px;
+
+    }
+} 
+
+
+#about {
+    background: url('./img/5.png') no-repeat center center/cover;
+ 
+    color: #fffffffe;
+    position: relative;
+    margin-top: -30px; /* Adjust for fixed header */
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#about .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  
+}
+@media (max-width:768px ){
+    #about .container {
+        position: relative;
+        z-index: 1;
+       display: block;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 20px;
+  
+      }
+  } 
+  
+
+
+.about-text {
+    flex: 2;
+    max-width: 800px;
+  }
+  
+
+
+
+#about .habout{
+ 
+  left: 200px;
+  position: relative;
+ 
+}
+@media (max-width:768px ){
+    #about .habout  {
+        font-size: 30px;
+        position: relative;
+        top: 20px;
+        left: 0px;      
+  
+      }
+  } 
+
+
+
+
+
+#about .aboutname{
+    font-size: 20px;
+   position: relative;
+   left: -180px;
+   top: 20px;  
+
+}
+@media (max-width:768px ){
+    #about .aboutname  {
+        font-size: 15px;
+        position: relative;
+        left: -100px;
+        top: 250px;
+        white-space: nowrap;     
+  
+      }
+  } 
+
+
+  #about .aboutna{
+   
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: -200px;
+    
+
+}
+@media (max-width:768px ){
+    #about .aboutna  {
+        font-size: 15px;
+    position: relative;
+    top:250px;
+    left: 45px;
+  
+   
+          
+  
+      }
+  } 
+
+
+
+  #about .para{
+    font-size: 20px;
+    position: relative;
+    left: 160px;
+    text-align: justify;
+    word-spacing: 0.2px;
+    line-height: 1.5;
+   margin-bottom: 60px;
+   
+    
+
+
+}
+@media (max-width:768px ){
+    #about .para  {
+        font-size: 15px;
+        line-height: 1.5;
+    position: relative;
+    top: 250px;
+    left: 20px;
+    width: 85%;
+    word-spacing: 0.2px;
+    color: #ffffffb4;
+    text-align: justify;
+   
+   
+    
+         
+  
+      }
+  } 
+
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profilepic {
+    content: url('./img/pro3.png');
+  width: auto;
+    height: 250px;
+   
+    position: relative;
+    left: 100px;
+    top: 50px;
+   
+  
+}
+@media (max-width:768px ){
+     .profilepic {
+        content: url('./img/pro3.png');
+        position: relative;
+        top: -330px;
+        right: 0px;
+        left:-0px;
+        bottom:0px;
+        height: 200px;
+        width: auto;  
+        margin-bottom: 100px; 
+  
+      }
+  } 
+
+
+#services {
+    background: url('./img/bg4.png') no-repeat center center/cover;
+ 
+    color: #fff;
+    position: relative;
+    top: -30px;
+   padding-bottom: 40px;
+    
+  
+}
+
+
+
+
+#services::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#services .container {
+    position: relative;
+    z-index: 1;
+   
+  
+}
+
+@media (max-width:768px ){
+    #services .container  {
+        position: relative;
+        z-index: 1;
+     top: -50px;
+       
+  
+      }
+  } 
+
+#services .services-grid{
+    color: #ffffffb4;
+    margin-bottom: 25px;
+
+}
+
+
+
+
+#services h3{
+    color: #2abbe467;
+    
+
+}
+
+.service:hover p {
+    color: #2abbe467; /* Icon color on hover */
+  }
+  
+.service:hover span {
+    color: #ffffff;
+}
+
+
+
+
+
+.service {
+    background: url('./img/14.png') no-repeat center center/cover;;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-basis: 30%;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    
+}
+
+@media (max-width:768px ){
+    .service {
+       background: url('./img/14.png')no-repeat center center/cover ;
+  
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+       flex-basis: 100%;
+       text-align: center;
+      
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+     }
+ } 
+
+.service:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  
+  }
+
+/* Hover effect for mobile view */
+@media (max-width: 768px) {
+    .service:hover {
+        transform: scale(1.05); /* Subtle enlargement for mobile */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Softer shadow for smaller screens */
+    }
+}
+  
+
+
+#skills {
+    background: url('./img/bg4.png') no-repeat center center/cover;
+ 
+    color: #fff;
+    position: relative;
+    margin-top: -130px;
+  
+}
+
+#skills::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#skills .container {
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+}
+@media (max-width: 768px) { /* Adjust the max-width value as needed */
+    #skills .container {
+        margin-top: 0px; /* Reduced margin for mobile screens */
+    }
+}
+
+#skillcaro{
+    position: relative;
+ margin-top: 0px;
+
+}
+
+
+
+
+#projects {
+    background: url('./img/8.png') no-repeat center center/cover;
+ 
+    color: #fff;
+    position: relative;
+    top: -30px;
+  
+}
+
+#projects::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#projects .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 65px;
+    padding-bottom: 50px;
+ 
+}
+
+
+
+
+
+
+#contact {
+    background: url('./img/5.png') no-repeat center center/cover;
+ 
+    color: #fff;
+    position: relative;
+    top: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  
+  
+}
+
+#contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#contact .container {
+    position: relative;
+    z-index: 1;
+    
+    
+  
+}
+
+
+
+
+
+
+.services-grid, .project-grid ,.skills-grid{
+   
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+
+
+
+.skills {
+    background: url('./img/5.png') no-repeat center center/cover;;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-basis: 30%;
+    text-align: center;
+    border-radius: 5px;
+   
+}
+
+/* .project {
+    background: url('./img/9.png') no-repeat center center/cover;;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-basis: 30%;
+    text-align: center;
+} */
+.service i, .project img {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    width: 40%; /* Adjusted width */
+    background-color: #ffffff2e;
+    border-bottom: #1a1a1a6e;
+ 
+}
+
+form textarea {
+    height: 100px; /* Adjusted height */
+}
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #00bfff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #0099cc;
+}
+
+
+.footer {
+   
+ 
+    background: #090909;
+    color: #fff;
+    text-align: center;
+    padding: 10px ;
+    /* background: #03030399; */
+  
+  
+}
+
+
+
+
+
+.projectbg{
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  
+   
+    
+}
+
+.para{
+   color: #ffffff98;
+}
+.h3col{
+    color: #2abbe467;
+    
+}
+.h2col{
+    color: #2abbe467;
+    font-size: 20px;
+}
+.ptext{
+    color: #ffffff98;
+    font-size: 13px;
+}
+
+
+.textfieldName{
+    background-color: #c8cfd1bd;
+position: relative;
+left: -250px;
+top: 80px;
+border-radius: 5px;
+padding: 10px; /* Add padding for better input spacing */
+}
+@media (max-width: 768px) {
+    .textfieldName {
+        position: relative;
+        /* Reset the left offset on smaller screens */
+ 
+       top: 0px;
+        left: 25px;
+      
+       
+
+    }
+}
+
+.textfieldemail{
+    background-color: #c8cfd1bd;
+    position: relative;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .textfieldemail {
+      
+        top: 0px;
+        left: 25px;
+      
+    }
+}
+
+
+.textfieldmess{
+    background-color: #c8cfd1bd;
+    position: relative;
+    left: -195px;
+  
+   width: 333px;
+    border-radius: 5px;
+
+}
+
+@media (max-width: 768px) {
+    .textfieldmess {
+      
+       width: 225px;
+       
+       top: 0px;
+       left: 25px;
+     
+    }
+}
+
+
+
+.buttonsub{
+    width: 110px;
+    position: relative;
+    top: -60px;
+    left: 55px;
+}
+@media (max-width: 768px) {
+    .buttonsub{
+        width: 90px;
+        position: relative;
+       top: 35px;
+        left: 90px;
+    }
+}
+
+
+
+.buttonreset{
+    width: 110px;
+    position: relative;
+    top: -150px;
+    left: 55px;
+
+}
+@media (max-width: 768px) {
+    .buttonreset{
+        width: 90px;
+        position: relative;
+       top: 0px;
+        left: -40px;
+    
+    }
+}
+
+
+
+.logocard {
+    display: flex; /* Set to flexbox for horizontal alignment */
+    width: 70%; /* Adjust width to fit content */
+    height: 400px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial glow is off */
+    transition: box-shadow 1.5s ease; /* Smooth glow transition */
+    border-radius: 10px;
+    align-items: center; /* Vertically center the content */
+    gap: 20px; /* Add spacing between the image and text */
+    position: relative;
+    top: 0px;
+    left: 180px;
+   
+  }
+  
+  .logocard:hover {
+    box-shadow: 0 0 30px rgba(42, 188, 228); /* Add glow on hover */
+    border-radius: 10px;
+  }
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    .logocard {
+       
+        display: flex;
+        height: 450px; /* Allow height to adjust dynamically */
+        width: auto;
+        margin: 0 auto; /* Center the card horizontally */
+        gap: 15px; /* Adjust gap for better spacing */
+        padding: 15px; /* Add extra padding for smaller screens */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial glow is off */
+        transition: box-shadow 1.5s ease; /* Smooth glow transition */
+        left: 2px;
+    }
+
+    .logocard:hover {
+        box-shadow: 0 0 30px rgba(42, 188, 228); /* Slightly reduce glow on mobile */
+    }
+}
+
+  
+  .logocard-front {
+    flex: 1; /* Image takes up one portion of the card */
+  }
+  
+  .logocardfront-image {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Optional rounded corners for the image */
+    position: relative;
+    
+    top: -30px;
+    left: -40px;
+  }
+
+  @media (max-width: 768px) {
+    .logocardfront-image {
+              
+        position: absolute;
+    
+        top: -100px;
+        left: 15px;
+           
+  
+    }
+}
+
+  
+  .logocard-back {
+    flex: 1; /* Text takes up another portion of the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    color: #fff;
+    border-radius: 10px;
+  }
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    .logocard-back {
+        display: flex;
+        background-color: #05050500;
+        font-size: 14px; /* Adjust font size for readability */
+       position: absolute;
+      
+      
+     
+    }
+}
+  
+  .logocardback-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  }
+  
+
+  .icon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 20px;
+    z-index: 5;
+  }
+  @media (max-width: 768px) {
+    .icon-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        
+      
+        
+      }
+}
+
+  
+  .social-icon1, .social-icon2, .social-icon3, .social-icon4, .social-icon5 {
+    color: white; /* Default icon color */
+    transition: transform 0.3s, color 0.3s, background 0.3s; /* Smooth hover transition */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .social-icon1:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); /* Gradient background */
+    color: white; /* Maintain white color for icon */
+  }
+  
+  .social-icon2:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+    color: #1877F2; /* Facebook official color */
+  
+  }
+  
+  .social-icon3:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+ 
+
+  }
+  
+  .social-icon4:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+    color: #0077B5; /* LinkedIn official color */
+
+  }
+  
+  .social-icon5:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+  
+   
+  }
+  
+  .logoakj{
+    width: auto;
+    vertical-align: middle;
+    height: 100px;
+
+  }
+  @media (max-width: 768px) {
+    .logoakj{
+        width: auto;
+        vertical-align: middle;
+        height: 80px;
+      
+      }
+}
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
