@@ -170,18 +170,31 @@ function Portfolio(props) {
       
       
 
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item.id} disablePadding>
-           <ListItemButton
-              sx={{ textAlign: 'center' }}
-              onClick={() => handleNavClick(item.id)}
-            >
-              <ListItemText primary={item.name} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+        <List>
+  {navItems.map((item) => (
+    <ListItem key={item.id} disablePadding>
+      {item.name === "Resume" ? (
+        <a
+          href={item.downloadLink}
+          download
+          style={{ textDecoration: 'none', width: '100%' }}
+        >
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemText primary={item.name} sx={{ color: '#2ABCE47F' }} />
+          </ListItemButton>
+        </a>
+      ) : (
+        <ListItemButton
+          sx={{ textAlign: 'center' }}
+          onClick={() => handleNavClick(item.id)}
+        >
+          <ListItemText primary={item.name} />
+        </ListItemButton>
+      )}
+    </ListItem>
+  ))}
+</List>
+
     </Box>
   );
 
@@ -286,7 +299,8 @@ function Portfolio(props) {
             
             {/* <p>Privacy is dead. Get over it.</p> */}
             <p>The biggest threat is thinking ‘it won’t happen to me.</p>
-            <a href="#contact" className="btn">Hire Me </a>
+            <a href="/Anjith.pdf" className="btn" download>Hire Me</a>
+
           </div>
         </div>
       </section>
