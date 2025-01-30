@@ -335,7 +335,7 @@ h2 {
 }
 @media (max-width:768px ){
      .profilepic {
-        content: url('./img/pro3.png');
+        content: url('./img/profile2.png');
         position: relative;
         top: -330px;
         right: 0px;
@@ -732,7 +732,7 @@ padding: 10px; /* Add padding for better input spacing */
 @media (max-width: 768px) {
     .textfieldmess {
       
-       width: 225px;
+       width: 230px;
        
        top: 0px;
        left: 25px;

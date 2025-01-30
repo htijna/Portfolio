@@ -3,7 +3,6 @@ import './styles.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -46,7 +45,7 @@ import { CircularProgress, TextField} from '@mui/material';
 import axios from 'axios';
 
 import logocard from "./img/log1.png"
-import logochart from "./img/chat.png"
+
 
 const drawerWidth = 240;
 
@@ -287,7 +286,7 @@ function Portfolio(props) {
             
             {/* <p>Privacy is dead. Get over it.</p> */}
             <p>The biggest threat is thinking ‘it won’t happen to me.</p>
-            <a href="#about" className="btn">Contact Us</a>
+            <a href="#contact" className="btn">Hire Me </a>
           </div>
         </div>
       </section>
