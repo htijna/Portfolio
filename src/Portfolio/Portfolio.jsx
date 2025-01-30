@@ -412,7 +412,7 @@ function Portfolio(props) {
    
     
    </div>
-   <div className="logocard-back">
+   
 
 
    <form  onSubmit={handleSubmit}>
@@ -471,7 +471,7 @@ function Portfolio(props) {
 
    </div>
  
-     </div>
+   
          
         </div>
       </section>

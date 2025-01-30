@@ -606,38 +606,6 @@ form {
 }
 
 
-form label {
-    margin-top: 10px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    width: 40%; /* Adjusted width */
-    background-color: #ffffff2e;
-    border-bottom: #1a1a1a6e;
- 
-}
-
-form textarea {
-    height: 100px; /* Adjusted height */
-}
-
-form button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: #00bfff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background: #0099cc;
-}
-
-
 .footer {
    
  
@@ -689,14 +657,20 @@ left: -250px;
 top: 80px;
 border-radius: 5px;
 padding: 10px; /* Add padding for better input spacing */
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+
 }
 @media (max-width: 768px) {
     .textfieldName {
-        position: relative;
-        /* Reset the left offset on smaller screens */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+       
  
-       top: 0px;
-        left: 25px;
+       top:5%;
+        left: -25%;
       
        
 
@@ -707,19 +681,31 @@ padding: 10px; /* Add padding for better input spacing */
     background-color: #c8cfd1bd;
     position: relative;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 @media (max-width: 768px) {
     .textfieldemail {
       
-        top: 0px;
-        left: 25px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+       
+ 
+        top:5%;
+         left: -25%;
       
     }
 }
 
 
 .textfieldmess{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
     background-color: #c8cfd1bd;
     position: relative;
     left: -195px;
@@ -731,11 +717,13 @@ padding: 10px; /* Add padding for better input spacing */
 
 @media (max-width: 768px) {
     .textfieldmess {
-      
-       width: 230px;
-       
-       top: 0px;
-       left: 25px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      position: absolute;
+       width: 100%;
+        top:5%;
+         left: -25%;
      
     }
 }
