@@ -1,181 +1,157 @@
-html {
-    scroll-padding-top: 100px; /* Adjust based on the height of your AppBar */
-  }
-  
- @media (max-width: 768px) {
-    html {
-      scroll-padding-top: 150px; /* Adjust this value based on your AppBar height for mobile */
-    }
-  }
-
-
-
-body #root  {
-    font-family: Arial, sans-serif;
+/* ─── RESET & GLOBAL STYLES ───────────────────────────── */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #090909;
+  }
   
-   
-   
-}
-
-
-header {
+  html {
+    scroll-padding-top: 5.25rem;
+  }
+  @media (max-width: 768px) {
+    html {
+      scroll-padding-top: 9.375rem;
+    }
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
     background: #090909;
-    color: #2abbe467;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
+    color: #fff;
+    line-height: 1.5;
+  }
+  
+  /* ─── CONTAINER ───────────────────────────────────────── */
+  .container {
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    
-}
-
-header .logo {
-    font-size: 24px;
-}
-
-header nav ul {
+    padding: 1rem 0;
+    text-align: center;
+   
+  }
+  
+  /* ─── HEADER & NAVIGATION ────────────────────────────── */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1000;
+  }
+  .logoakj {
+    width: auto;
+    vertical-align: middle;
+    height: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    .logoakj {
+      width: auto;
+      vertical-align: middle;
+      height: 80px;
+    }
+  }
+  
+  nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
+    gap: 1rem;
+  }
+  nav ul li a {
     color: #fff;
     text-decoration: none;
-    color: #2abbe467;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    font-size: 35px;
-   margin-bottom: 55px;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #2ABCE47F;
+  }
   
-}
-@media (max-width: 768px) { /* Adjust the max-width value based on your breakpoint */
-    h2 {
-        font-size: 30px; /* Smaller font size for mobile */
-        margin-bottom: 35px; /* Reduced margin for better spacing */
-    }
-}
-
-#hero {
+  /* Drawer Logo */
+  .drawer-logo {
+    width: auto;
+    vertical-align: middle;
+    height: 60px;
+  }
+  
+  /* ─── SECTIONS COMMON ─────────────────────────────────── */
+  .section {
+    padding: 5rem 0 3rem;
+    position: relative;
+  }
+  
+  /* ─── HERO SECTION ─────────────────────────────────────── */
+  #hero {
     height: 100vh;
     background: url('./img/pc1.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
     position: relative;
-}
-
-/* Use a different background for smaller screens */
-@media (max-width: 768px) {
-    #hero {
-        background: url('./img/pc1.png') no-repeat center center/cover;
-       height: 300px;
-      
-    }
-}
-
-
-
-#hero::after {
-    content: '';
+  }
+  #hero::before {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.6);
-}
-
-#hero .container {
+  }
+  #hero .container {
     position: relative;
     z-index: 1;
-    padding-top: 350px;
-
-}
-@media (max-width: 768px) {
-    #hero .container  {
-        position: relative;
-        z-index: 1;
-        padding-top: 160px;
-      
+  }
+  #hero p {
+    font-size: 1.5rem;
+    margin-top: 20rem; /* Adjust this value as needed */
+    margin-bottom: 1.25rem;
+    color: #fff;
+   
+  }
+  #hero .btn {
+    background: #00bfff;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    transition: background 0.3s;
+  }
+  #hero .btn:hover {
+    background: #0098e0;
+  }
+  @media (max-width: 768px) {
+    #hero {
+      height: 18.75rem;
     }
-}
-
-#hero h1 {
-    font-size: 48px;
-    margin: 0 0 20px;
-}
-
-#hero p {
-    font-size: 24px;
-    margin: 0 0 20px;
-}
-@media (max-width: 768px) {
-    #hero p { 
-         font-size: 12px;
-         margin: 0 0 20px;
+    #hero .container {
+      padding-top: 8rem;
+    }
+    #hero p {
+        font-size: 0.875rem;
+      color: #fff;
+      margin-top: 2rem; /* Only 10rem margin top on mobile */
+    }
+    #hero .btn {
+      padding: 0.5rem 0.5rem;
+      font-size: 0.675rem;
+    }
+  }
   
-       
-      
-    }
-}
 
-
-#hero .btn {
-    background: #00bfff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-@media (max-width:768px ){
-  #hero .btn  {
-    background: #00bfff;
-    color: #fff;
-    padding: 7px 7px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 10px;
-
-    }
-} 
-
-
+/* ─── ABOUT SECTION GLOBAL STYLES ────────────────────────── */
 #about {
     background: url('./img/5.png') no-repeat center center/cover;
- 
-    color: #fffffffe;
+    color: #fff;
     position: relative;
-    margin-top: -30px; /* Adjust for fixed header */
-}
-
-#about::after {
+    margin-top: -3.13rem; /* Adjust if needed for your fixed header */
+  }
+  
+  #about::after {
     content: '';
     position: absolute;
     top: 0;
@@ -183,187 +159,134 @@ h2 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
-}
-
-#about .container {
+  }
+  
+  /* The heading styling */
+  .habout {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5rem;
+    font-size: 2.19rem;
+     z-index: 1;
     position: relative;
+  }
+  .habout .h3col {
+    color: #2ABCE47F; /* "Me" in blue */
+  }
+  
+  /* The container that holds both text and image */
+  .about-container {
     z-index: 1;
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  /* Desktop: text on left, image on right */
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px;
-  
-}
-@media (max-width:768px ){
-    #about .container {
-        position: relative;
-        z-index: 1;
-       display: block;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 20px;
-  
-      }
-  } 
-  
-
-
-.about-text {
-    flex: 2;
-    max-width: 800px;
+    gap: 10px;
+    margin-bottom: 4rem;
   }
   
-
-
-
-#about .habout{
+  /* Global styling for text */
+  .about-text {
+    flex: 2;
+    max-width: 800px;
+    text-align: left;
+  
+  }
  
-  left: 200px;
-  position: relative;
- 
-}
-@media (max-width:768px ){
-    #about .habout  {
-        font-size: 30px;
-        position: relative;
-        top: 20px;
-        left: 0px;      
   
-      }
-  } 
-
-
-
-
-
-#about .aboutname{
-    font-size: 20px;
-   position: relative;
-   left: -180px;
-   top: 20px;  
-
-}
-@media (max-width:768px ){
-    #about .aboutname  {
-        font-size: 15px;
-        position: relative;
-        left: -100px;
-        top: 250px;
-        white-space: nowrap;     
-  
-      }
-  } 
-
-
-  #about .aboutna{
-   
-    font-size: 25px;
-    margin-bottom: 20px;
-    margin-left: -200px;
-    
-
-}
-@media (max-width:768px ){
-    #about .aboutna  {
-        font-size: 15px;
-    position: relative;
-    top:250px;
-    left: 45px;
-  
-   
-          
-  
-      }
-  } 
-
-
-
-  #about .para{
-    font-size: 20px;
-    position: relative;
-    left: 160px;
-    text-align: justify;
-    word-spacing: 0.2px;
+  .para {
+    margin-bottom: 1rem;
     line-height: 1.5;
-   margin-bottom: 60px;
-   
-    
-
-
-}
-@media (max-width:768px ){
-    #about .para  {
-        font-size: 15px;
-        line-height: 1.5;
-    position: relative;
-    top: 250px;
-    left: 20px;
-    width: 85%;
-    word-spacing: 0.2px;
-    color: #ffffffb4;
+    font-size: 1.25rem; 
+    word-spacing: 1.5px;
     text-align: justify;
    
-   
-    
-         
+    color: #ffffffb4;
   
-      }
-  } 
-
+  }
+  .aboutna{
+   padding-top: 0.4rem; 
+   padding-bottom:0.4rem; 
+  
+   font-size: 1.56rem; 
+  }
+  
+  
+  /* Global styling for the image */
   .about-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   .profilepic {
-    content: url('./img/pro3.png');
-  width: auto;
-    height: 250px;
-   
-    position: relative;
-    left: 100px;
-    top: 50px;
-   
+    width: auto;
+    max-width: 100%;
+    height: 250px;  /* Desktop image size */
+    border-radius: 8px; /* Optional */
+  }
   
-}
-@media (max-width:768px ){
-     .profilepic {
-        content: url('./img/profile2.png');
-        position: relative;
-        top: -300px;
-        right: 0px;
-        left:-0px;
-        bottom:0px;
-        height: 200px;
-        width: auto;  
-        margin-bottom: 100px; 
-  
-      }
-  } 
-
-
-#services {
-    background: url('./img/bg4.png') no-repeat center center/cover;
- 
-    color: #fff;
-    position: relative;
-    top: -30px;
-   padding-bottom: 40px;
+  /* ─── MOBILE STYLES ────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    /* For mobile, stack the content vertically */
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      margin-bottom: 0rem;
+    }
     
+    @media (max-width: 768px) {
+        .about-text p,
+        .para {
+          margin-bottom: 0.75rem;  /* Slightly less bottom margin */
+          line-height: 1.5;        /* Adjusted line height */
+          font-size: 0.94rem;      /* Reduced font size */
+          word-spacing: 0.2px;
+        }
+      }
+    /* Reverse the order within the container so the image appears first */
+    .about-image {
+      order: 1;  /* Image comes first */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    
+    .about-text {
+      order: 2;  /* Text comes after image */
+      width: 90%;
+   
+    }
+    
+    /* Adjust the profile image size for mobile */
+    .profilepic {
+      height: 150px;
+      width: auto;
+    }
+    .habout {
   
-}
+      margin-bottom: 1rem;
+     
+    }
+  }
+  
+  
+  /* ─── SERVICES SECTION ─────────────────────────────────── */
+  #services {
+    background: url('./img/bg4.png') no-repeat center center/cover;
+  
+    color: #fff;
+  
+margin-top: -8rem;
 
-
-
-
-#services::after {
+  }
+  #services::after {
     content: '';
     position: absolute;
     top: 0;
@@ -379,96 +302,77 @@ h2 {
    
   
 }
+  .services-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .service {
+    background: url('./img/14.png') no-repeat center center/cover;
+    padding: 2rem;
+    border-radius: 5px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+   
+  }
+  .service:hover {
+    transform: scale(1.06);
+  }
 
-@media (max-width:768px ){
-    #services .container  {
-        position: relative;
-        z-index: 1;
-     top: -50px;
-       
+
+  /* Increase card size for PC view (screens wider than 1024px) */
+@media (min-width: 1024px) {
+    .service {
+      flex: 1 1 350px;
+      max-width: 350px;
+      margin: 0.7rem; /* Adds space around each card */
+      
+    }
+  }
+  .h3col {
+    color: #2ABCE47F; /* "Me" in blue */
+    
+  }
+  .service-h2 {
+    gap: 10px;
+    padding: 1rem;
+    font-size: 2.19rem;
+    margin-bottom: 1.5rem;
+  }
   
-      }
-  } 
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .service-h2 {
+      gap: 5px;           /* Reduce the gap if needed */
+    margin-bottom: 1rem;
+      font-size: 1.88rem;  /* Adjust font size (30px equivalent, if desired) */
+    }
+  }
 
-#services .services-grid{
-    color: #ffffffb4;
-    margin-bottom: 25px;
-
-}
-
-
-
-
-#services h3{
+  #services h3{
     color: #2abbe467;
+  margin-bottom: 0.5rem;
     
 
 }
-
 .service:hover p {
     color: #2abbe467; /* Icon color on hover */
   }
-  
-.service:hover span {
+  .service:hover span {
     color: #ffffff;
 }
-
-
-
-
-
-.service {
-    background: url('./img/14.png') no-repeat center center/cover;;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex-basis: 30%;
-    text-align: center;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   
-    
-}
-
-@media (max-width:768px ){
-    .service {
-       background: url('./img/14.png')no-repeat center center/cover ;
-  
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-       flex-basis: 100%;
-       text-align: center;
-      
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-     }
- } 
-
-.service:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
-  
+  /* ─── SKILLS SECTION ───────────────────────────────────── */
+  #skills {
+    background: url('./img/bg4.png') no-repeat center center/cover;
+    color: #fff;
+    margin-top: -5rem;
   }
 
-/* Hover effect for mobile view */
-@media (max-width: 768px) {
-    .service:hover {
-        transform: scale(1.05); /* Subtle enlargement for mobile */
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Softer shadow for smaller screens */
-    }
-}
-  
-
-
-#skills {
-    background: url('./img/bg4.png') no-repeat center center/cover;
- 
-    color: #fff;
-    position: relative;
-    margin-top: -130px;
-  
-}
-
-#skills::after {
+  #skills::after {
     content: '';
     position: absolute;
     top: 0;
@@ -477,37 +381,33 @@ h2 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
 }
-
 #skills .container {
     position: relative;
     z-index: 1;
-    margin-top: 100px;
-}
-@media (max-width: 768px) { /* Adjust the max-width value as needed */
-    #skills .container {
-        margin-top: 0px; /* Reduced margin for mobile screens */
-    }
+
+   
 }
 
-#skillcaro{
-    position: relative;
- margin-top: 0px;
+  #skillcaro {
+    margin-top: 2rem;
+  }
 
-}
+   #skills h2 {
+    
+    margin-bottom: 3rem;
+    font-size: 2.19rem;
+  }
+  
 
-
-
-
+ /* ─── PROJECTS SECTION ─────────────────────────────────── */
 #projects {
     background: url('./img/8.png') no-repeat center center/cover;
- 
-    color: #fff;
-    position: relative;
-    top: -30px;
+    
+    margin-top: -6rem;
+   
+  }
   
-}
-
-#projects::after {
+  #projects::after {
     content: '';
     position: absolute;
     top: 0;
@@ -516,443 +416,381 @@ h2 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
 }
+  
 
 #projects .container {
     position: relative;
     z-index: 1;
-    padding-top: 65px;
-    padding-bottom: 50px;
- 
-}
-
-
-
-
-
-
-#contact {
-    background: url('./img/5.png') no-repeat center center/cover;
- 
-    color: #fff;
-    position: relative;
-    top: -50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  
-  
-}
-
-#contact::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-#contact .container {
-    position: relative;
-    z-index: 1;
-    
-    
-  
-}
-
-
-
-
-
-
-.services-grid, .project-grid ,.skills-grid{
    
+ 
+}
+
+  /* Grid layout for project cards */
+  .project-grid {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-   
-}
-
-
-
-.skills {
-    background: url('./img/5.png') no-repeat center center/cover;;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex-basis: 30%;
-    text-align: center;
-    border-radius: 5px;
-   
-}
-
-/* .project {
-    background: url('./img/9.png') no-repeat center center/cover;;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex-basis: 30%;
-    text-align: center;
-} */
-.service i, .project img {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-}
-
-
-.footer {
-   
- 
-    background: #090909;
-    color: #fff;
-    text-align: center;
-    padding: 10px ;
-    /* background: #03030399; */
+    gap: 1rem;           /* Adjust the space between cards */
+    flex-wrap: wrap;      /* Wrap the cards to new lines as needed */
+    justify-content: center;
+  }
   
+
+
+
+
+  /* Individual project card styling */
+  .project {
+    flex: 1 1 300px;      /* Ideal card width of 300px, flexible to shrink/grow */
+    max-width: 300px;     /* Ensures the card doesn't exceed 300px */
+    text-align: center;
   
-}
-
-
-
-
-
-.projectbg{
+    padding: 1rem;        /* Internal spacing for content */
+    border-radius: 5px;   /* Rounded corners */
+    transition: transform 0.3s;
+  }
+  
+  /* Optional: Hover effect on project cards */
+  .project:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Styling for project images */
+  .projectbg {
+    display: block;        /* Makes the image a block-level element */
+    margin: 0 auto;        /* Centers the image horizontally within its container */
     padding: 10px;
     height: 200px;
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
+  }
   
-   
-    
-}
-
-.para{
-   color: #ffffff98;
-}
-.h3col{
-    color: #2abbe467;
-    
-}
-.h2col{
-    color: #2abbe467;
-    font-size: 20px;
-}
-.ptext{
+  /* Styling for project description text */
+  .ptext {
     color: #ffffff98;
-    font-size: 13px;
-}
-
-
-.textfieldName{
-    background-color: #c8cfd1bd;
-position: relative;
-left: -250px;
-top: 80px;
-border-radius: 5px;
-padding: 10px; /* Add padding for better input spacing */
-display: flex;
-justify-content: space-between;
-flex-direction: row;
-
-}
-@media (max-width: 768px) {
-    .textfieldName {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-       
- 
-       top:5%;
-       left: -15%;
-      
-       
-
-    }
-}
-
-.textfieldemail{
-    background-color: #c8cfd1bd;
-    position: relative;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-@media (max-width: 768px) {
-    .textfieldemail {
-      
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-       
- 
-        top:5%;
-        left: -16%;
-      
-    }
-}
-
-
-.textfieldmess{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-
-    background-color: #c8cfd1bd;
-    position: relative;
-    left: -195px;
-  
-   width: 333px;
-    border-radius: 5px;
-
-}
-
-@media (max-width: 768px) {
-    .textfieldmess {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-      position: absolute;
-       width: 100%;
-        top:5%;
-        left: -17%;
-     
-    }
-}
-
-
-
-.buttonsub{
-    width: 110px;
-    position: relative;
-    top: -60px;
-    left: 55px;
-}
-@media (max-width: 768px) {
-    .buttonsub{
-        width: 90px;
-        position: relative;
-       top: 35px;
-        left: 20px;
-    }
-}
-
-
-
-.buttonreset{
-    width: 110px;
-    position: relative;
-    top: -150px;
-    left: 55px;
-
-}
-@media (max-width: 768px) {
-    .buttonreset{
-        width: 90px;
-        position: relative;
-       top: 0px;
-        left: -100px;
+    font-size: 0.81rem;  /* Adjust as needed */
+    margin-top: 0.5rem;
+  }
     
+#projects h2{
+    font-size: 2.19rem;
+    color: #fff;
+    margin-bottom: 3.5rem;
+
+  }
+  
+  /* Optional: Adjust the project heading if needed */
+  .project h3 {
+    margin: 0.5rem 0;
+  }
+  
+  /* Media Query: If you need adjustments on mobile devices */
+  @media (max-width: 768px) {
+    .project {
+      flex: 1 1 100%;
+      max-width: 90%; /* For instance, make cards take up most of the width on mobile */
     }
+  }
+
+
+
+/* ─── CONTACT SECTION ─────────────────────────────────── */
+#contact {
+  background: url('./img/5.png') no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+margin-top: -2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Main container */
+#contact .container {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+#contact h2{
+  font-size: 2.19rem;
+  gap: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  
 }
 
 
 
+/* ─── Logocard for PC View ───────────────────────── */
 .logocard {
-    display: flex; /* Set to flexbox for horizontal alignment */
-    width: 70%; /* Adjust width to fit content */
-    height: 400px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial glow is off */
-    transition: box-shadow 1.5s ease; /* Smooth glow transition */
-    border-radius: 10px;
-    align-items: center; /* Vertically center the content */
-    gap: 20px; /* Add spacing between the image and text */
+  display: flex;
+  flex-direction: row;       /* Logo on left, form on right */
+  align-items: center;
+  justify-content: space-between;
+  width: 70%; /* Adjust width to fit content */
+  height: 400px;      /* Approximately 10cm high */
+  margin: 0 auto;
+  gap: 20px;                /* Space between logo and form */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+  transition: box-shadow 1.5s ease;
+  border-radius: 10px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2); /* Subtle tint */
+}
+
+.logocard:hover {
+  box-shadow: 0 0 30px rgba(42, 188, 228);
+
+}
+
+/* Logo image container */
+.logocard-front {
+  flex: 1;
+}
+
+.logocardfront-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  top: -1.88rem;
+
+}
+
+/* ─── Form Styling ───────────────────────────────────── */
+form {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textfieldName,
+.textfieldemail,
+.textfieldmess {
+  width: 80%;
+  background-color: #c8cfd1bd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5rem;  /* Default margin on larger screens */
+ 
+  
+}
+
+/* ─── Form Buttons Container ───────────────────────── */
+.form-buttons {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 2rem;             /* Adds space between the buttons */
+  margin-top: 1rem; 
+  margin-left: -5rem;
+      /* Optional: adjust spacing above the buttons */
+
+}
+
+
+.buttonsub,
+.buttonreset {
+  width: 30%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+/* ─── MOBILE ADJUSTMENTS (Screen width ≤768px) ───────── */
+@media (max-width: 768px) {
+  #contact {
+    padding: 2rem 0;
+  }
+  
+  #contact .container {
+    width: 90%;
+    padding: 0 1rem;
+  }
+  #contact h2{
+    font-size: 2.19rem;
+    gap: 10px;
+    padding: 1rem;
+    margin-bottom: 0rem;
+  }
+  
+  /* In mobile view, we want the form to appear without the separate logo element.
+     Instead, we use the logo image as a background for the logocard. */
+  .logocard {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    padding: 1rem;
+    gap: 10px;
+    /* Use the logo image as the background */
+    background: url('./img/log1.png') no-repeat center -4.38rem/cover;
+  }
+  
+  /* Hide the separate logo image element in mobile view */
+  .logocard-front {
+    display: none;
+  
+  }
+  
+  /* Ensure the form fills the logocard */
+  form {
+    width: 90%;
+  }
+  .textfieldName,
+.textfieldemail,
+.textfieldmess {
+  width: 100%;
+  background-color: #c8cfd1bd;
+  border-radius: 5px;
+  padding: 10px;
+ 
+  
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 2rem;             /* Adds space between the buttons */
+  margin-top: 1rem; 
+margin-left: 0rem;
+      /* Optional: adjust spacing above the buttons */
+margin-bottom: 1rem;
+}
+
+.buttonsub,
+.buttonreset {
+  width: 50%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+  /* Optionally, adjust the background appearance if needed */
+  /* For example, you might add a semi-transparent overlay on top of the logo background
+     for better contrast with the form fields */
+}
+
+  /* ─── SOCIAL ICONS & FOOTER ───────────────────────────── */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+    background: #090909;
+    z-index: 1;
     position: relative;
-    top: 0px;
-    left: 180px;
+ padding-top: 1rem;
+
+  
+   
    
   }
-  
-  .logocard:hover {
-    box-shadow: 0 0 30px rgba(42, 188, 228); /* Add glow on hover */
-    border-radius: 10px;
+  .icon-container > * {
+    transition: transform 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  .icon-container > *:hover {
+    transform: scale(1.3);
   }
 
-/* Add a media query for smaller screens */
-@media (max-width: 768px) {
-    .logocard {
-       
-        display: flex;
-        height: 450px; /* Allow height to adjust dynamically */
-        width: auto;
-        margin: 0 auto; /* Center the card horizontally */
-        gap: 15px; /* Adjust gap for better spacing */
-        padding: 15px; /* Add extra padding for smaller screens */
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial glow is off */
-        transition: box-shadow 1.5s ease; /* Smooth glow transition */
-        left: 2px;
-    }
-
-    .logocard:hover {
-        box-shadow: 0 0 30px rgba(42, 188, 228); /* Slightly reduce glow on mobile */
-    }
-}
-
-  
-  .logocard-front {
-    flex: 1; /* Image takes up one portion of the card */
-  }
-  
-  .logocardfront-image {
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px; /* Optional rounded corners for the image */
-    position: relative;
-    
-    top: -30px;
-    left: -40px;
-  }
-
-  @media (max-width: 768px) {
-    .logocardfront-image {
-              
-        position: absolute;
-    
-        top: -100px;
-        left: 15px;
-           
-  
-    }
-}
-
-  
-  .logocard-back {
-    flex: 1; /* Text takes up another portion of the card */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #050505;
-    color: #fff;
-    border-radius: 10px;
-  }
-/* Add a media query for smaller screens */
-@media (max-width: 768px) {
-    .logocard-back {
-        display: flex;
-        background-color: #05050500;
-        font-size: 14px; /* Adjust font size for readability */
-       position: absolute;
-      
-      
-     
-    }
-}
-  
-  .logocardback-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
-  }
-  
-
-  .icon-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    gap: 20px;
-    z-index: 5;
-  }
-  @media (max-width: 768px) {
-    .icon-container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        
-      
-        
-      }
-}
-
-  
   .social-icon1, .social-icon2, .social-icon3, .social-icon4, .social-icon5 {
     color: white; /* Default icon color */
     transition: transform 0.3s, color 0.3s, background 0.3s; /* Smooth hover transition */
     cursor: pointer; /* Change cursor to pointer */
   }
-  
+
   .social-icon1:hover {
     transform: scale(1.3); /* Slightly enlarge on hover */
     border-radius: 5px;
     background: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); /* Gradient background */
     color: white; /* Maintain white color for icon */
   }
-  
   .social-icon2:hover {
     transform: scale(1.3); /* Slightly enlarge on hover */
     color: #1877F2; /* Facebook official color */
   
   }
-  
   .social-icon3:hover {
     transform: scale(1.3); /* Slightly enlarge on hover */
  
 
   }
-  
   .social-icon4:hover {
     transform: scale(1.3); /* Slightly enlarge on hover */
     color: #0077B5; /* LinkedIn official color */
 
   }
-  
   .social-icon5:hover {
     transform: scale(1.3); /* Slightly enlarge on hover */
   
    
   }
-  
-  .logoakj{
-    width: auto;
-    vertical-align: middle;
-    height: 100px;
-
+  .footer {
+    background: #090909;
+    padding: 1rem;
+    text-align: center;
   }
+  .footerfill {
+    margin: 0 auto;
+    color: #ffffffb4;
+    font-size: 0.8rem;
+  }
+  
   @media (max-width: 768px) {
-    .logoakj{
-        width: auto;
-        vertical-align: middle;
-        height: 80px;
-      
-      }
-}
+    .icon-container {
+    
+      gap: 1rem;
+      font-size: 1rem;
+     
+     
+    }
+    .icon-container > * {
+      transition: transform 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    .icon-container > *:hover {
+      transform: scale(1.3);
+    }
+    .footerfill {
+      margin: 0 auto;
+      color: #ffffffb4;
+      font-size: 0.7rem;
+    }
+  }
 
 
-
+  /* ─── RESPONSIVE ADJUSTMENTS ────────────────────────── */
+  @media (max-width: 768px) {
+    header {
+      padding: 0 0.5rem;
+    }
+    #hero .container {
+      padding-top: 8rem;
+    }
+    .logocard {
+      flex-direction: column;
+      height: auto;
+      width: 90%;
+      padding: 1rem;
+    }
+  }
   
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
