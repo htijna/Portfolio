@@ -489,6 +489,11 @@ margin-top: -8rem;
       flex: 1 1 100%;
       max-width: 90%; /* For instance, make cards take up most of the width on mobile */
     }
+    #projects h2{
+     margin-bottom: 2rem;
+      
+  
+    }
   }
 
 
