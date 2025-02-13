@@ -5,6 +5,10 @@
     box-sizing: border-box;
   }
   
+  html, body {
+    background-color: #090909;
+  }
+  
   html {
     scroll-padding-top: 5.25rem;
   }
@@ -17,7 +21,7 @@
   body {
     font-family: Arial, sans-serif;
     background: #090909;
- 
+    color: #fff;
     line-height: 1.5;
   }
   
