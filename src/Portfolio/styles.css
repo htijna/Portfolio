@@ -5,12 +5,16 @@
     box-sizing: border-box;
   }
   
+
   html, body {
-    background-color: #090909;
+   
   }
   
+
   html {
     scroll-padding-top: 5.25rem;
+    background-color: #090909;
+    overscroll-behavior-y: contain; /* This may help in some browsers */
   }
   @media (max-width: 768px) {
     html {
@@ -23,6 +27,7 @@
     background: #090909;
     color: #fff;
     line-height: 1.5;
+    
   }
   
   /* ─── CONTAINER ───────────────────────────────────────── */
