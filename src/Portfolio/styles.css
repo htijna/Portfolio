@@ -10,11 +10,13 @@
   html {
     scroll-padding-top: 5.25rem;
     background-color: #090909;
-    overscroll-behavior-y: contain; /* This may help in some browsers */
+  
   }
   @media (max-width: 768px) {
     html {
       scroll-padding-top: 9.375rem;
+      background-color: #090909;
+      overscroll-behavior: none; 
     }
   }
   
@@ -23,9 +25,20 @@
     background: #090909;
     color: #fff;
     line-height: 1.5;
+    overscroll-behavior: none; 
     
   }
-  
+  .container,
+#hero,
+#about,
+#services,
+#skills,
+#projects,
+#contact {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
   /* ─── CONTAINER ───────────────────────────────────────── */
   .container {
     width: 90%;
