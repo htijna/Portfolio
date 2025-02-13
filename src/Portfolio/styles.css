@@ -28,16 +28,7 @@
     overscroll-behavior: none; 
     
   }
-  .container,
-#hero,
-#about,
-#services,
-#skills,
-#projects,
-#contact {
-  transform: translateZ(0);
-  will-change: transform;
-}
+
 
   /* ─── CONTAINER ───────────────────────────────────────── */
   .container {
