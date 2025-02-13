@@ -289,8 +289,8 @@
   /* ─── SERVICES SECTION ─────────────────────────────────── */
   #services {
     background: url('./img/bg4.png') no-repeat center center/cover;
-  
-    color: #fff;
+  color: #fff;
+
   
 margin-top: -8rem;
 
@@ -311,6 +311,8 @@ margin-top: -8rem;
    
   
 }
+
+
   .services-grid {
     display: flex;
     gap: 2rem;
@@ -363,9 +365,11 @@ margin-top: -8rem;
 
   #services h3{
     color: #2abbe467;
-  margin-bottom: 0.5rem;
-    
+  margin-bottom: 0.5rem;  
 
+}
+.service p {
+  color: #ffffffb4;
 }
 .service:hover p {
     color: #2abbe467; /* Icon color on hover */
