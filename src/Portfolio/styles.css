@@ -10,6 +10,8 @@
   html {
     scroll-padding-top: 5.25rem;
     background-color: #090909;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
   
   }
   @media (max-width: 768px) {
@@ -17,6 +19,8 @@
       scroll-padding-top: 9.375rem;
       background-color: #090909;
       overscroll-behavior: none; 
+      backface-visibility: hidden;
+      transform: translate3d(0,0,0);
     }
   }
   
@@ -26,10 +30,19 @@
     color: #fff;
     line-height: 1.5;
     overscroll-behavior: none; 
-    transform: translateZ(0);
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
     
   }
-
+#hero::before,
+#about::after,
+#services::after,
+#skills::after,
+#projects::after,
+#contact::after {
+  background-color: #090909;
+  background-blend-mode: overlay;
+}
 
   /* ─── CONTAINER ───────────────────────────────────────── */
   .container {
@@ -94,12 +107,13 @@
   .section {
     padding: 5rem 0 3rem;
     position: relative;
+    will-change: transform;
   }
   
   /* ─── HERO SECTION ─────────────────────────────────────── */
   #hero {
     height: 100vh;
-    background: #090909 url('./img/pc1.png') no-repeat center center/cover;
+    background: url('./img/pc1.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,7 +169,7 @@
 
 /* ─── ABOUT SECTION GLOBAL STYLES ────────────────────────── */
 #about {
-    background: #090909 url('./img/5.png') no-repeat center center/cover;
+    background: url('./img/5.png') no-repeat center center/cover;
     color: #fff;
     position: relative;
     margin-top: -3.13rem; /* Adjust if needed for your fixed header */
@@ -321,7 +335,7 @@ margin-top: -8rem;
     justify-content: center;
   }
   .service {
-    background: #090909 url('./img/14.png') no-repeat center center/cover;
+    background: url('./img/14.png') no-repeat center center/cover;
     padding: 2rem;
     border-radius: 5px;
     flex: 1 1 300px;
@@ -381,7 +395,7 @@ margin-top: -8rem;
   
   /* ─── SKILLS SECTION ───────────────────────────────────── */
   #skills {
-    background: #090909 url('./img/bg4.png') no-repeat center center/cover;
+    background: url('./img/bg4.png') no-repeat center center/cover;
     color: #fff;
     margin-top: -5rem;
   }
@@ -415,7 +429,7 @@ margin-top: -8rem;
 
  /* ─── PROJECTS SECTION ─────────────────────────────────── */
 #projects {
-    background: #090909 url('./img/8.png') no-repeat center center/cover;
+    background: url('./img/8.png') no-repeat center center/cover;
     
     margin-top: -6rem;
    
@@ -514,7 +528,7 @@ margin-top: -8rem;
 
 /* ─── CONTACT SECTION ─────────────────────────────────── */
 #contact {
-  background: #090909 url('./img/5.png') no-repeat center center/cover;
+  background: url('./img/5.png') no-repeat center center/cover;
   color: #fff;
   position: relative;
 margin-top: -2rem;
