@@ -98,7 +98,7 @@
   /* ─── HERO SECTION ─────────────────────────────────────── */
   #hero {
     height: 100vh;
-    background: url('./img/pc1.png') no-repeat center center/cover;
+    background: #090909 url('./img/pc1.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +154,7 @@
 
 /* ─── ABOUT SECTION GLOBAL STYLES ────────────────────────── */
 #about {
-    background: url('./img/5.png') no-repeat center center/cover;
+    background: #090909 url('./img/5.png') no-repeat center center/cover;
     color: #fff;
     position: relative;
     margin-top: -3.13rem; /* Adjust if needed for your fixed header */
@@ -320,7 +320,7 @@ margin-top: -8rem;
     justify-content: center;
   }
   .service {
-    background: url('./img/14.png') no-repeat center center/cover;
+    background: #090909 url('./img/14.png') no-repeat center center/cover;
     padding: 2rem;
     border-radius: 5px;
     flex: 1 1 300px;
@@ -380,7 +380,7 @@ margin-top: -8rem;
   
   /* ─── SKILLS SECTION ───────────────────────────────────── */
   #skills {
-    background: url('./img/bg4.png') no-repeat center center/cover;
+    background: #090909 url('./img/bg4.png') no-repeat center center/cover;
     color: #fff;
     margin-top: -5rem;
   }
@@ -414,7 +414,7 @@ margin-top: -8rem;
 
  /* ─── PROJECTS SECTION ─────────────────────────────────── */
 #projects {
-    background: url('./img/8.png') no-repeat center center/cover;
+    background: #090909 url('./img/8.png') no-repeat center center/cover;
     
     margin-top: -6rem;
    
@@ -513,7 +513,7 @@ margin-top: -8rem;
 
 /* ─── CONTACT SECTION ─────────────────────────────────── */
 #contact {
-  background: url('./img/5.png') no-repeat center center/cover;
+  background: #090909 url('./img/5.png') no-repeat center center/cover;
   color: #fff;
   position: relative;
 margin-top: -2rem;
