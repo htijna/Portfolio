@@ -10,6 +10,7 @@
   html {
     scroll-padding-top: 5.25rem;
     background-color: #090909;
+    overflow-x: hidden;
   
   }
   @media (max-width: 768px) {
@@ -26,6 +27,7 @@
     color: #fff;
     line-height: 1.5;
     overscroll-behavior: none; 
+    overflow-x: hidden;
     
   }
 
