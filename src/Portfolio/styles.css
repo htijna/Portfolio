@@ -159,7 +159,7 @@
   }
   @media (max-width: 768px) {
     #hero {
-      height: 18.75rem;
+      height: 24rem;
     }
     #hero .container {
       padding-top: 8rem;
