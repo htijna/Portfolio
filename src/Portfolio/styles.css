@@ -165,7 +165,7 @@
       height: 24rem;
          
          background: url('./img/pc1.png') no-repeat center center;
-    background-size: 125%; /* zoom in slightly, small crop */
+    background-size: 135%; /* zoom in slightly, small crop */
    
     }
     #hero .container {
