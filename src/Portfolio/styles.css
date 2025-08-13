@@ -162,7 +162,7 @@
 
 @media (max-device-width: 768px) {
     #hero {
-      height: 30rem;
+      height: 25rem;
          
          background: url('./img/pc1mob.png') no-repeat center center;
     background-size: 135%; /* zoom in slightly, small crop */
