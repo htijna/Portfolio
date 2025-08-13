@@ -157,9 +157,16 @@
   #hero .btn:hover {
     background: #0098e0;
   }
+
+
+
   @media (max-width: 768px) {
     #hero {
       height: 24rem;
+         
+         background: url('./img/pc1.png') no-repeat center center;
+    background-size: 125%; /* zoom in slightly, small crop */
+   
     }
     #hero .container {
       padding-top: 8rem;
