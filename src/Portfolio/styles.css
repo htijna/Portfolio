@@ -160,7 +160,7 @@
 
 
 
-  @media (max-width: 768px) {
+@media (max-device-width: 768px) {
     #hero {
       height: 24rem;
          
