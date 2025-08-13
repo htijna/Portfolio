@@ -174,7 +174,7 @@
     #hero p {
         font-size: 0.875rem;
       color: #fff;
-      margin-top: 2rem; /* Only 10rem margin top on mobile */
+      margin-top: 1rem; /* Only 10rem margin top on mobile */
     }
     #hero .btn {
       padding: 0.5rem 0.5rem;
