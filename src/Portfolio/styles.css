@@ -164,7 +164,7 @@
     #hero {
       height: 24rem;
          
-         background: url('./img/pc1.png') no-repeat center center;
+         background: url('./img/pc1mob.png') no-repeat center center;
     background-size: 135%; /* zoom in slightly, small crop */
    
     }
