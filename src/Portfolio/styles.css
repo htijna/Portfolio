@@ -157,9 +157,16 @@
   #hero .btn:hover {
     background: #0098e0;
   }
-  @media (max-width: 768px) {
+
+
+
+@media (max-device-width: 768px) {
     #hero {
       height: 24rem;
+         
+         background: url('./img/pc1mob.png') no-repeat center center;
+    background-size: 135%; /* zoom in slightly, small crop */
+   
     }
     #hero .container {
       padding-top: 8rem;
@@ -167,7 +174,7 @@
     #hero p {
         font-size: 0.875rem;
       color: #fff;
-      margin-top: 2rem; /* Only 10rem margin top on mobile */
+      margin-top: 1rem; /* Only 10rem margin top on mobile */
     }
     #hero .btn {
       padding: 0.5rem 0.5rem;
