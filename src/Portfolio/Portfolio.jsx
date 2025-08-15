@@ -455,7 +455,7 @@ function Portfolio(props) {
   <a href="https://www.linkedin.com/in/anjith-kj-48022b223" target="_blank" rel="noopener noreferrer">
     <FaLinkedin className="social-icon4" />
   </a>
-  <a href="https://github.com/htijna" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/anjithkj" target="_blank" rel="noopener noreferrer">
     <FaGithub className="social-icon3" />
   </a>
   <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
