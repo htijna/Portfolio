@@ -12,6 +12,7 @@
     background-color: #090909;
     scroll-behavior: smooth;
    backface-visibility: hidden;
+   
 /* transform: translate3d(0,0,0); */
 
     
@@ -44,6 +45,7 @@
     line-height: 1.5;
     overscroll-behavior: none; 
 backface-visibility: hidden;
+overflow-x: hidden;
 /* transform: translate3d(0,0,0); */
 
     
@@ -122,8 +124,7 @@ backface-visibility: hidden;
   }
 
   .page-content{
-      will-change: transform;
-  transform: translateZ(0);   /* only accelerate content */
+     transform: translateZ(0); /* accelerates scrolling content */
   backface-visibility: hidden;
   }
   
