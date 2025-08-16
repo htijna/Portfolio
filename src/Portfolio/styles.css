@@ -22,7 +22,7 @@ transform: translate3d(0,0,0);
       scroll-padding-top: 9.375rem;
       background-color: #090909;
       scroll-behavior: smooth;
-      overscroll-behavior: smooth; 
+      overscroll-behavior: none; 
       backface-visibility: hidden;
 transform: translate3d(0,0,0);
 
@@ -42,7 +42,7 @@ transform: translate3d(0,0,0);
     background: #090909;
     color: #fff;
     line-height: 1.5;
-    overscroll-behavior: smooth; 
+    overscroll-behavior: none; 
 backface-visibility: hidden;
 transform: translate3d(0,0,0);
 
