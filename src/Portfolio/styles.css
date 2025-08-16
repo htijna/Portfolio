@@ -16,6 +16,7 @@
 /* transform: translate3d(0,0,0); */
 
     
+
   
   }
   @media (max-width: 768px) {
@@ -61,7 +62,12 @@ backface-visibility: hidden;
 
 
 
-
+.page-content{
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  }
+  
 
   /* ─── CONTAINER ───────────────────────────────────────── */
   .container {
@@ -122,10 +128,6 @@ backface-visibility: hidden;
     height: 60px;
   }
 
-  .page-content{
-     transform: translateZ(0); /* accelerates scrolling content */
-  backface-visibility: hidden;
-  }
   
   /* ─── SECTIONS COMMON ─────────────────────────────────── */
   .section {
