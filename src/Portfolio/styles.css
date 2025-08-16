@@ -58,6 +58,7 @@ backface-visibility: hidden;
 #contact::after {
   background-color: #090909;
   background-blend-mode: overlay;
+   transform: translateZ(0);
 }
 
 
