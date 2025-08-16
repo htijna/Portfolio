@@ -24,8 +24,9 @@ transform: translate3d(0,0,0); */
       background-color: #090909;
       scroll-behavior: smooth;
       overscroll-behavior: none; 
-      /* backface-visibility: hidden;
-transform: translate3d(0,0,0); */
+      backface-visibility: hidden;
+
+/* transform: translate3d(0,0,0); */
 
 
     }
