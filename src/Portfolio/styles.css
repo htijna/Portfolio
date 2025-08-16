@@ -11,8 +11,9 @@
     scroll-padding-top: 5.25rem;
     background-color: #090909;
     scroll-behavior: smooth;
-   backface-visibility: hidden;
-transform: translate3d(0,0,0);
+    overscroll-behavior: none; 
+   /* backface-visibility: hidden;
+transform: translate3d(0,0,0); */
 
     
   
@@ -30,7 +31,7 @@ transform: translate3d(0,0,0);
     }
   }
   body::before{
-    content: "";
+   content: none !important; 
     position: fixed;
     top: 0; left: 0;right: 0;bottom: 0;
     background-color: #090909;
@@ -43,8 +44,8 @@ transform: translate3d(0,0,0);
     color: #fff;
     line-height: 1.5;
     overscroll-behavior: none; 
-backface-visibility: hidden;
-transform: translate3d(0,0,0);
+/* backface-visibility: hidden;
+transform: translate3d(0,0,0); */
 
     
   }

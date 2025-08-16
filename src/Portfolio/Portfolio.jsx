@@ -15,7 +15,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { CircularProgress, TextField } from '@mui/material';
 import axios from 'axios';
-
 import logo from './img/log1.png';
 import akj from './img/logoakj.png';
 import profilepic from './img/prof3.png';
@@ -155,7 +154,20 @@ function Portfolio(props) {
     <div className="fullco">
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar component="nav" sx={{ height: '70px', backgroundColor: '#000', position: 'fixed' }}>
+        <AppBar
+  component="nav"
+  sx={{
+    height: '70px',
+    backgroundColor: '#000',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1300, // keep above other content
+    willChange: 'transform' // smoother scroll
+  }}
+>
+
   <Toolbar>
     {/* Desktop View (sm and up): Logo on left, nav buttons on right */}
     <Box
