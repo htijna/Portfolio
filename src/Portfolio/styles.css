@@ -58,6 +58,10 @@ backface-visibility: hidden;
   background-blend-mode: overlay;
 }
 
+
+
+
+
   /* ─── CONTAINER ───────────────────────────────────────── */
   .container {
     width: 90%;
@@ -122,6 +126,7 @@ backface-visibility: hidden;
     padding: 5rem 0 3rem;
     position: relative;
     will-change: transform;
+    transform: translate3d(0,0,0);  
   }
   
   /* ─── HERO SECTION ─────────────────────────────────────── */
