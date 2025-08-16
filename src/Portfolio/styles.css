@@ -120,6 +120,12 @@ backface-visibility: hidden;
     vertical-align: middle;
     height: 60px;
   }
+
+  .page-content{
+      will-change: transform;
+  transform: translateZ(0);   /* only accelerate content */
+  backface-visibility: hidden;
+  }
   
   /* ─── SECTIONS COMMON ─────────────────────────────────── */
   .section {

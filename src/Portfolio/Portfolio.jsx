@@ -265,6 +265,7 @@ function Portfolio(props) {
         </Box>
       </Box>
 {/* HERO SECTION */}
+<div className='page-content'>
 <section id="hero" className="section">
   <div className="container">
     <p>
@@ -483,6 +484,7 @@ function Portfolio(props) {
           </p>
         </div>
       </footer>
+      </div>
     </div>
   );
 }
