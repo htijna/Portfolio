@@ -7,15 +7,15 @@
   
 
 
-  html {
+  /* html {
     scroll-padding-top: 5.25rem;
     background-color: #090909;
     scroll-behavior: smooth;
    backface-visibility: hidden;
    
-/* transform: translate3d(0,0,0); */
+transform: translate3d(0,0,0);
 
-    
+  }  */
 
 html,
 body,
@@ -35,7 +35,7 @@ body,
 
 
   
-  }
+  
   @media (max-width: 768px) {
     html {
       scroll-padding-top: 9.375rem;
