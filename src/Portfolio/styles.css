@@ -11,7 +11,9 @@
     scroll-padding-top: 5.25rem;
     background-color: #090909;
     scroll-behavior: smooth;
-   
+   backface-visibility: hidden;
+transform: translate3d(0,0,0);
+
     
   
   }
@@ -41,6 +43,8 @@ transform: translate3d(0,0,0);
     color: #fff;
     line-height: 1.5;
     overscroll-behavior: none; 
+backface-visibility: hidden;
+transform: translate3d(0,0,0);
 
     
   }
