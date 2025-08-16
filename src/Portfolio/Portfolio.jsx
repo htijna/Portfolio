@@ -20,9 +20,9 @@ import logo from './img/log1.png';
 import akj from './img/logoakj.png';
 import profilepic from './img/prof3.png';
 import profilepicMobile from './img/prof4.png'; 
-import proj1 from './img/ecog1.png';
-import proj2 from './img/infogather.png';
-import proj3 from './img/COming soon.png';
+import proj1 from './img/tool1.png';
+import proj2 from './img/webd1.jpeg';
+import proj3 from './img/ctf1.jpg';
 
 import skill1 from './img/skill1.png';
 import skill2 from './img/skill2.png';
@@ -350,20 +350,20 @@ function Portfolio(props) {
               <a href="https://github.com/htijna/Ecogfront">
                 <img className="projectbg" src={proj1} alt="Project 1" />
               </a>
-              <h3 className="h3col">ECO-G</h3>
-              <p className="ptext">Farmer-Consumer Marketplace</p>
+              <h3 className="h3col">CTOOLS</h3>
+              <p className="ptext">Comprehensive Tools Suite</p>
             </div>
             <div className="project">
               <a href="https://github.com/htijna/Infogather">
                 <img className="projectbg" src={proj2} alt="Project 2" />
               </a>
-              <h3 className="h3col">INFOGATHER</h3>
-              <p className="ptext">OSINT Analysis and Reporting Tool</p>
+              <h3 className="h3col">WEB PROJECTS</h3>
+              <p className="ptext">Design and Development</p>
             </div>
             <div className="project">
               <img className="projectbg" src={proj3} alt="Project 3" />
-              <h3 className="h3col">Project 3</h3>
-              <p className="ptext">Description of Project 3.</p>
+              <h3 className="h3col">CTF</h3>
+              <p className="ptext">Hands-on Expertise</p>
             </div>
           </div>
         </div>
