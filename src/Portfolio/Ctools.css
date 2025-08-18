@@ -8,7 +8,7 @@
 .toolhero-heading h1 {
   font-size: 40px;
   font-weight: 900;
-  background: linear-gradient(90deg, #007bff, #00e0ff);
+  background: linear-gradient(90deg,#2ABCE4, #00e0ff);
   
   /* 🔹 Background Clip for Gradient Text */
   background-clip: text;            /* Standard property */
