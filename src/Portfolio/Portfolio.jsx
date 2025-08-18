@@ -378,11 +378,12 @@ function Portfolio(props) {
           <h2>My <span className="h3col">Projects</span></h2>
           <div className="project-grid">
             <div className="project">
-              <Link to="/ctools" style={{textDecoration:"none"}}>
+              <Link to="/ctools" className='project-card'>
                 <img className="projectbg" src={proj1} alt="Project 1" />
-              </Link>
+             
               <h3 className="h3col">CTOOLS</h3>
               <p className="ptext">Comprehensive Tools Suite</p>
+               </Link>
             </div>
             <div className="project">
               <a href="https://github.com/htijna/Infogather">

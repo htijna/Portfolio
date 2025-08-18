@@ -568,6 +568,25 @@ margin-top: -8rem;
 
 
 
+
+
+  .project-card {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;               /* hand cursor on hover */
+  text-decoration: none;         /* remove underline */
+  color: inherit;                /* keep text color */
+}
+
+.project-card:hover, 
+.project-card:active {
+  box-shadow: 0 0 15px #2ABCE4;
+  transform: translateY(-5px);   /* lift up effect */
+}
+
 /* ─── CONTACT SECTION ─────────────────────────────────── */
 #contact {
   background: url('./img/5.png') no-repeat center center/cover;
