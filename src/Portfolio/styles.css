@@ -581,10 +581,16 @@ margin-top: -8rem;
   color: inherit;                /* keep text color */
 }
 
-.project-card:hover, 
+/* keep hover for PC */
+.project-card:hover {
+  box-shadow: 0 0 15px #2ABCE4;
+  transform: translateY(-5px);
+}
+
+/* add active for mobile tap */
 .project-card:active {
   box-shadow: 0 0 15px #2ABCE4;
-  transform: translateY(-5px);   /* lift up effect */
+  transform: translateY(-5px);
 }
 
 /* ─── CONTACT SECTION ─────────────────────────────────── */
