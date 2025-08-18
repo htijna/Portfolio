@@ -4,6 +4,8 @@ import { FaPlaneDeparture } from "react-icons/fa";
 import Navbar from "./Navbar";
 import ctool1 from './img/ctool.png';
 import ctool2 from './img/ctool2.jpeg'
+import ctool3 from './img/soon.png'
+import ctool4 from './img/soon.png'
 
 import { LiaToolsSolid } from "react-icons/lia";
 const ToolCard = ({ image, subtitle, description }) => {
@@ -55,7 +57,7 @@ const Ctools = () => {
           airport="MLE"
         />
         <ToolCard
-          image="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba"
+          image={ctool3}
          
           subtitle="Premium"
           description="Experience the blend of tradition and technology in Tokyo and Kyoto's cultural wonders."
@@ -63,7 +65,7 @@ const Ctools = () => {
           airport="HND"
         />
         <ToolCard
-          image="https://images.unsplash.com/photo-1505765050516-f72dcac9c60b"
+          image={ctool4}
           
           subtitle="Economy"
           description="Paris, the city of lights, offers iconic landmarks, art, fashion, and timeless romance."
