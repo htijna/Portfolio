@@ -38,6 +38,8 @@ import { RiTwitterXFill } from "react-icons/ri";
 
 import TypewriterEffect from './TypewriterEffect';
 import Carousel from './Carousel';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = [
@@ -73,6 +75,22 @@ function Portfolio(props) {
     }
   };
 
+
+
+ const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth" });
+        }, 100); // small delay so DOM is ready
+      }
+    }
+  }, [location.state]);
+
+  
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
@@ -360,9 +378,9 @@ function Portfolio(props) {
           <h2>My <span className="h3col">Projects</span></h2>
           <div className="project-grid">
             <div className="project">
-              <a href="https://github.com/htijna/Ecogfront">
+              <Link to="/ctools" style={{textDecoration:"none"}}>
                 <img className="projectbg" src={proj1} alt="Project 1" />
-              </a>
+              </Link>
               <h3 className="h3col">CTOOLS</h3>
               <p className="ptext">Comprehensive Tools Suite</p>
             </div>

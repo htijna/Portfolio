@@ -18,6 +18,13 @@ import logo from './img/log1.png';
 import akj from './img/logoakj.png';
 
 import './Navbar.css'
+import { useLocation, useNavigate } from 'react-router-dom';
+
+
+
+
+
+
 
 
 const drawerWidth = 240;
@@ -31,24 +38,35 @@ const navItems = [
   { name: 'Resume', id: 'resume', downloadLink: '/Anjith.pdf' }
 ];
 
+
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const handleNavClick = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setMobileOpen(false);
+    if (location.pathname === "/") {
+      // Already on Home → just scroll
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to home and tell it which section to scroll
+      navigate("/", { state: { scrollTo: id } });
     }
+    setMobileOpen(false);
   };
 
 
+
+
+  
 
  
   const container = window !== undefined ? () => window().document.body : undefined;
