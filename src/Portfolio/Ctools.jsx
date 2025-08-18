@@ -35,7 +35,7 @@ const Ctools = () => {
       
           <span>Custom Tools</span>
         </h1>
-        <p>custom-built tool purposefully designed for 🌍</p>
+        <p>A custom-built tool purposefully designed to meet users needs</p>
       </div>
 
       {/* 🔹 Cards */}
