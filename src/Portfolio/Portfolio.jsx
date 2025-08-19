@@ -387,11 +387,14 @@ function Portfolio(props) {
                </Link>
             </div>
             <div className="project">
-              <a href="https://github.com/htijna/Infogather">
+
+        <Link to="/webprojects" className='project-card'>
                 <img className="projectbg" src={proj2} alt="Project 2" />
-              </a>
+            
               <h3 className="h3col">WEB PROJECTS</h3>
               <p className="ptext">Design and Development</p>
+                 <button className="project-btn">Access</button> 
+              </Link>
             </div>
             <div className="project">
               <img className="projectbg" src={proj3} alt="Project 3" />
