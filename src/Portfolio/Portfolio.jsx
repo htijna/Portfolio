@@ -18,7 +18,7 @@ import axios from 'axios';
 import logo from './img/log1.png';
 import akj from './img/logoakj.png';
 import profilepic from './img/prof3.png';
-import profilepicMobile from './img/prof4.png'; 
+import profilepicMobile from './img/pic2.png'; 
 import proj1 from './img/tool1.png';
 import proj2 from './img/webd1.jpeg';
 import proj3 from './img/ctf1.jpg';
