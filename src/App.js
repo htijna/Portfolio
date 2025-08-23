@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Portfolio />} />
         <Route path="/ctools" element={<Ctools />} />
         <Route path="/webprojects" element={<Webprojects/>} />
-            <Route path="/protected-project" element={<Protectedproject />} />
+            <Route path="/protectedproject" element={<Protectedproject />} />
       </Routes>
     </BrowserRouter>
 

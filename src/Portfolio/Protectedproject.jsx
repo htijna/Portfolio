@@ -1,35 +1,41 @@
-import React, { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom"; // ✅ needs react-router
+import React, { useState } from "react";
 import "./protectedproject.css";
 import Navbar from "./Navbar";
 
 export default function ProtectedProject() {
-  const [searchParams] = useSearchParams();
-  const projectUrl = searchParams.get("url"); // project URL
-  const correctCode = searchParams.get("code"); // project-specific code
-
-  const [code, setCode] = useState("");
+  const [password, setPassword] = useState(""); // password input
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (code.trim() === "") {
-      triggerError("⚠️ Enter the code.");
+    if (password.trim() === "") {
+      triggerError("⚠️ Enter the password.");
       return;
     }
 
-    if (code === correctCode) {
-      setLoading(true);
-      setTimeout(() => setFadeOut(true), 1200);
-      setTimeout(() => {
-        window.location.assign(projectUrl);
-      }, 2000);
-    } else {
-      triggerError("❌ Invalid Code. Please try again.");
+    try {
+      const res = await fetch("http://localhost:5000/api/unlock", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: password.trim() }), // send password
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setLoading(true);
+        setTimeout(() => {
+          window.location.href = data.url; // redirect after success
+        }, 1000);
+      } else {
+        triggerError(data.message); // invalid password
+      }
+    } catch {
+      triggerError("⚠️ Server error. Try again later.");
     }
   };
 
@@ -50,29 +56,31 @@ export default function ProtectedProject() {
 
   return (
     <div>
-        <Navbar/>
-    <div className="lock-screen">
-      <div className="lock-box">
-        <h1 className="title">🔒 Secure Access</h1>
-        <p className="subtitle">Enter the project code</p>
-        <form onSubmit={handleSubmit} className="form">
-          <input
-            type="password"
-            maxLength="10"
-            placeholder="••••••••••"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            className="code-input"
-          />
-          {error && (
-            <p className={`error-toast ${showError ? "show" : ""}`}>{error}</p>
-          )}
-          <button type="submit" className="unlock-btn">
-            Unlock
-          </button>
-        </form>
+      <Navbar />
+      <div className="lock-screen">
+        <div className="lock-box">
+          <h1 className="title">🔒 Secure Access</h1>
+          <p className="subtitle">Enter the project password</p>
+          <form onSubmit={handleSubmit} className="form">
+            <input
+              type="password"
+              maxLength="20"
+              placeholder="••••••••••"
+              value={password} // fixed
+              onChange={(e) => setPassword(e.target.value)} // fixed
+              className="code-input"
+            />
+            {error && (
+              <p className={`error-toast ${showError ? "show" : ""}`}>
+                {error}
+              </p>
+            )}
+            <button type="submit" className="unlock-btn">
+              Unlock
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

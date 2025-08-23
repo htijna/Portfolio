@@ -1,20 +1,43 @@
 {
   "files": {
-    "main.css": "/static/css/main.080b187d.css",
-    "main.js": "/static/js/main.d2207421.js",
-    "static/media/2.png": "/static/media/2.6c2dfd6e614b5cf78840.png",
-    "static/media/1.png": "/static/media/1.e8e7bb8804f6cd0dc647.png",
+    "main.css": "/static/css/main.40c8a71b.css",
+    "main.js": "/static/js/main.be7bb7af.js",
+    "static/media/ctool.png": "/static/media/ctool.2dcb51a6469b32ec1970.png",
+    "static/media/pc1.png": "/static/media/pc1.6c2dfd6e614b5cf78840.png",
     "static/media/14.png": "/static/media/14.7d0f8e112b3c85644038.png",
-    "static/media/profile1.png": "/static/media/profile1.341ff9a7e7e67532cfe5.png",
+    "static/media/tool1.png": "/static/media/tool1.8667c2f8e11ae772d7b9.png",
+    "static/media/pc1mob.png": "/static/media/pc1mob.6f9d1e17a7de2073b953.png",
+    "static/media/webd1.jpeg": "/static/media/webd1.a392ce471f0d552929f5.jpeg",
+    "static/media/prof3.png": "/static/media/prof3.343bc0393f5c169617f0.png",
+    "static/media/pic2.png": "/static/media/pic2.20f84adea7507dc08632.png",
+    "static/media/skill3.png": "/static/media/skill3.2bd77bbb291f41dfc475.png",
+    "static/media/skill9.png": "/static/media/skill9.5694e154ec27f70ace05.png",
+    "static/media/skill1.png": "/static/media/skill1.52262e254c8096a266cb.png",
+    "static/media/skill8.png": "/static/media/skill8.93c895ae76b47e42e915.png",
+    "static/media/skill6.png": "/static/media/skill6.a1e1e26e8392ad45c074.png",
+    "static/media/skill2.png": "/static/media/skill2.3e1d9fa1891cb129e103.png",
+    "static/media/ecog2.png": "/static/media/ecog2.d9cc6918c6d28e3baf5e.png",
+    "static/media/skill4.png": "/static/media/skill4.7b92b3842be5b4ac3740.png",
+    "static/media/skill7.png": "/static/media/skill7.7950017e002b523a21ad.png",
+    "static/media/skill5.png": "/static/media/skill5.bc9de812049250eb6eab.png",
     "static/media/bg4.png": "/static/media/bg4.fbd2ef34c4e257548313.png",
+    "static/media/ctf1.jpg": "/static/media/ctf1.01a1dc60275e74d4a18a.jpg",
     "static/media/8.png": "/static/media/8.afc3c6e713be572f21d1.png",
     "static/media/5.png": "/static/media/5.cda7de259c94a2d8f650.png",
+    "static/media/dresscode.png": "/static/media/dresscode.7fd0e78269c463be9dd9.png",
+    "static/media/flames1.jpeg": "/static/media/flames1.a12c0bb6c6bd43c89bae.jpeg",
+    "static/media/soon.png": "/static/media/soon.5bed521fac1c6c5af8fb.png",
+    "static/media/ctool2.jpeg": "/static/media/ctool2.957ea61e79184f5baf0a.jpeg",
+    "static/media/logoakj.png": "/static/media/logoakj.2b622007199c5066f70a.png",
+    "static/media/log1.png": "/static/media/log1.9e659abf191bac735e5c.png",
     "index.html": "/index.html",
-    "main.080b187d.css.map": "/static/css/main.080b187d.css.map",
-    "main.d2207421.js.map": "/static/js/main.d2207421.js.map"
+    "static/media/arrow-left.svg": "/static/media/arrow-left.fbe7f835db7a16b7bfbaab172298bb3f.svg",
+    "static/media/arrow-right.svg": "/static/media/arrow-right.8d8270cd74cc5ad0897baffc0fc7d196.svg",
+    "main.40c8a71b.css.map": "/static/css/main.40c8a71b.css.map",
+    "main.be7bb7af.js.map": "/static/js/main.be7bb7af.js.map"
   },
   "entrypoints": [
-    "static/css/main.080b187d.css",
-    "static/js/main.d2207421.js"
+    "static/css/main.40c8a71b.css",
+    "static/js/main.be7bb7af.js"
   ]
 }

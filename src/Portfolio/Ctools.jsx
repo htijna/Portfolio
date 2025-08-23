@@ -7,15 +7,12 @@ import ctool2 from "./img/ctool2.jpeg";
 import ctool3 from "./img/soon.png";
 import ctool4 from "./img/soon.png";
 
-const ToolCard = ({ image, subtitle, description, projectUrl, accessCode }) => {
+const ToolCard = ({ image, subtitle, description }) => {
   const navigate = useNavigate();
 
   const handleAccess = () => {
-    navigate(
-      `/protected-project?url=${encodeURIComponent(
-        projectUrl
-      )}&code=${encodeURIComponent(accessCode)}`
-    );
+    // Navigate to the password entry page
+    navigate("/protectedproject");
   };
 
   return (
@@ -53,29 +50,21 @@ const Ctools = () => {
           image={ctool1}
           subtitle="Infogather"
           description="Professional OSINT-driven tool for effective intelligence gathering and reporting."
-          projectUrl="https://google.com"
-          accessCode="1234"
         />
         <ToolCard
           image={ctool2}
           subtitle="ThreatEye"
           description="Scans systems to detect and identify malicious code in real time."
-          projectUrl="https://instagram.com"
-          accessCode="5678"
         />
         <ToolCard
           image={ctool3}
           subtitle="Premium"
           description="Coming soon..."
-          projectUrl="#"
-          accessCode="9999"
         />
         <ToolCard
           image={ctool4}
           subtitle="Economy"
           description="Coming soon..."
-          projectUrl="#"
-          accessCode="0000"
         />
       </div>
     </div>
