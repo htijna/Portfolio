@@ -1,29 +1,35 @@
 import React from "react";
 import "./Ctools.css";
-import { FaPlaneDeparture } from "react-icons/fa";
 import Navbar from "./Navbar";
-import ctool1 from './img/ctool.png';
-import ctool2 from './img/ctool2.jpeg'
-import ctool3 from './img/soon.png'
-import ctool4 from './img/soon.png'
+import { useNavigate } from "react-router-dom";
+import ctool1 from "./img/ctool.png";
+import ctool2 from "./img/ctool2.jpeg";
+import ctool3 from "./img/soon.png";
+import ctool4 from "./img/soon.png";
 
-import { LiaToolsSolid } from "react-icons/lia";
-const ToolCard = ({ image, subtitle, description }) => {
+const ToolCard = ({ image, subtitle, description, projectUrl, accessCode }) => {
+  const navigate = useNavigate();
+
+  const handleAccess = () => {
+    navigate(
+      `/protected-project?url=${encodeURIComponent(
+        projectUrl
+      )}&code=${encodeURIComponent(accessCode)}`
+    );
+  };
+
   return (
-    <div>
-      <Navbar/>
     <div className="fulltool">
       <div className="toolcard">
-        <img src={image}  className="toolcard-image" />
+        <img src={image} className="toolcard-image" alt={subtitle} />
         <div className="toolcard-content">
-         
           <p className="toolsubtitle">{subtitle}</p>
           <p className="tooldescription">{description}</p>
-        
-          <button className="toolsearch-btn">Access</button>
+          <button className="toolsearch-btn" onClick={handleAccess}>
+            Access
+          </button>
         </div>
       </div>
-    </div>
     </div>
   );
 };
@@ -31,46 +37,45 @@ const ToolCard = ({ image, subtitle, description }) => {
 const Ctools = () => {
   return (
     <div>
-      {/* 🔹 Hero Heading */}
+      <Navbar />
+
+      {/* Hero Heading */}
       <div className="toolhero-heading">
         <h1>
-      
           <span>Custom Tools</span>
         </h1>
-        <p>A custom-built tool purposefully designed to meet users needs</p>
+        <p>A custom-built tool purposefully designed to meet users' needs</p>
       </div>
 
-      {/* 🔹 Cards */}
+      {/* Cards */}
       <div className="toolcontainer">
         <ToolCard
           image={ctool1}
           subtitle="Infogather"
           description="Professional OSINT-driven tool for effective intelligence gathering and reporting."
-         
+          projectUrl="https://google.com"
+          accessCode="1234"
         />
         <ToolCard
           image={ctool2}
-          
           subtitle="ThreatEye"
           description="Scans systems to detect and identify malicious code in real time."
-          price="$450"
-          airport="MLE"
+          projectUrl="https://instagram.com"
+          accessCode="5678"
         />
         <ToolCard
           image={ctool3}
-         
           subtitle="Premium"
-          description="Experience the blend of tradition and technology in Tokyo and Kyoto's cultural wonders."
-          price="$600"
-          airport="HND"
+          description="Coming soon..."
+          projectUrl="#"
+          accessCode="9999"
         />
         <ToolCard
           image={ctool4}
-          
           subtitle="Economy"
-          description="Paris, the city of lights, offers iconic landmarks, art, fashion, and timeless romance."
-          price="$300"
-          airport="CDG"
+          description="Coming soon..."
+          projectUrl="#"
+          accessCode="0000"
         />
       </div>
     </div>

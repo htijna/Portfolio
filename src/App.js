@@ -6,6 +6,7 @@ import Ctools from './Portfolio/Ctools';
 import Portfolio from './Portfolio/Portfolio';
 import { BrowserRouter } from 'react-router-dom';
 import Webprojects from './Portfolio/Webprojects';
+import Protectedproject from './Portfolio/Protectedproject';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Portfolio />} />
         <Route path="/ctools" element={<Ctools />} />
         <Route path="/webprojects" element={<Webprojects/>} />
+            <Route path="/protected-project" element={<Protectedproject />} />
       </Routes>
     </BrowserRouter>
 
