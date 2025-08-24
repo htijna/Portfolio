@@ -46,12 +46,12 @@ const Ctf = () => {
         <ToolCard
           image={ctf1}
           subtitle="CyberQuest"
-          description="Conquer challenges, discover knowledge."
+          description="Conquer challenges, discover."
         />
         <ToolCard
           image={ctf2}
           subtitle="Web Exploitation"
-          description="Uncovering and exploiting vulnerabilities."
+          description="Uncovering and exploiting."
         />
         <ToolCard
           image={ctf3}
@@ -68,11 +68,7 @@ const Ctf = () => {
           subtitle="Cryptography"
           description="Breaking and analyzing ciphers."
         />
-         <ToolCard
-          image={soon}
-          subtitle="Cryptography"
-          description="Breaking and analyzing ciphers."
-        />
+       
       </div>
     </div>
   );
