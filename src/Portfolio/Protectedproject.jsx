@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 export default function ProtectedProject() {
   const location = useLocation();
   const section = location.state?.section || "default";
-
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
@@ -31,12 +31,11 @@ const normalizedSection = section.toLowerCase().replace(/[^a-z0-9]/g, "");
     }, 10000); // 10 seconds
 
     try {
-     const res = await fetch("http://localhost:5000/api/unlock", {
+const res = await fetch(`${API_URL}/api/unlock`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ section: normalizedSection, password: password.trim() }),
 });
-
       const data = await res.json();
       clearTimeout(timeout); // clear timeout if request succeeds
 

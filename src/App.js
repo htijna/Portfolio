@@ -6,31 +6,40 @@ import Portfolio from "./Portfolio/Portfolio";
 import Webprojects from "./Portfolio/Webprojects";
 import Protectedproject from "./Portfolio/Protectedproject";
 import Ctf from "./Portfolio/Ctf";
+import Preloader from "./Portfolio/Preloader";
 
-import Preloader from "./Portfolio/Preloader.jsx";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      // Start fade-out
-      setFadeOut(true);
+    let maxTimeout;
 
-      // Remove loader after animation (0.8s matches CSS)
-      setTimeout(() => {
-        setLoading(false);
-      }, 800);
+    const handleLoad = () => {
+      // Trigger fade out immediately if page loaded
+      setFadeOut(true);
+      // Remove loader after fade out animation (0.8s)
+      setTimeout(() => setLoading(false), 800);
+      clearTimeout(maxTimeout);
     };
 
     window.addEventListener("load", handleLoad);
-    return () => window.removeEventListener("load", handleLoad);
+
+    // Maximum 5 seconds loading fallback
+    maxTimeout = setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(() => setLoading(false), 800);
+    }, 5000); // 5 seconds
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(maxTimeout);
+    };
   }, []);
 
-  if (loading) {
-    return <Preloader fadeOut={fadeOut} />;
-  }
+  if (loading) return <Preloader fadeOut={fadeOut} />;
 
   return (
     <div className="App">
