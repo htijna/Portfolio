@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 🔹 Logo rotate → pause → rotate → pause */
+@keyframes spinPause {
+  0%   { transform: rotate(0deg); }
+  30%  { transform: rotate(360deg); }  /* spin */
+  50%  { transform: rotate(360deg); }  /* hold */
+  80%  { transform: rotate(720deg); }  /* spin again */
+  100% { transform: rotate(720deg); }  /* hold again */
+}
+
+/* 🔹 Responsive text */
+@media (max-width: 768px) {
+  .preloader-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .preloader-text {
+    font-size: 14px;
+  }
+}
