@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 export default function ProtectedProject() {
   const location = useLocation();
   const section = location.state?.section || "default";
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_URL = "https://portfoliobend-production.up.railway.app";
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
