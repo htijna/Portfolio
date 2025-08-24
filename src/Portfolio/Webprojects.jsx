@@ -8,7 +8,14 @@ import web3 from './img/flames1.jpeg'
 import ctool4 from './img/soon.png'
 
 import { LiawebprojectsSolid } from "react-icons/lia";
+import { useNavigate } from "react-router-dom";
 const ToolCard = ({ image, subtitle, description }) => {
+   const navigate = useNavigate();
+
+  const handleAccess = () => {
+    // Pass the section to ProtectedProject
+    navigate("/protectedproject", { state: { section: subtitle.toLowerCase() } });
+  };
   return (
     <div>
       <Navbar/>
@@ -20,7 +27,7 @@ const ToolCard = ({ image, subtitle, description }) => {
           <p className="webprojectsubtitle">{subtitle}</p>
           <p className="tooldescription">{description}</p>
         
-          <button className="webprojectsearch-btn">Access</button>
+          <button className="webprojectsearch-btn" onClick={handleAccess}>Access</button>
         </div>
       </div>
     </div>

@@ -236,3 +236,66 @@ body {
   font-size: 1rem;
   margin-top: 10px;
 }
+/* Timeout / 404 Screen */
+.error-404-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  color: #ff4c4c; /* red neon */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.error-404-screen h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff4c4c, 0 0 20px rgba(255, 76, 76, 0.6);
+}
+
+.error-404-screen p {
+  font-size: 1.2rem;
+  color: #ff7a7a;
+  margin-bottom: 25px;
+  text-shadow: 0 0 6px #ff4c4c;
+}
+
+/* Retry / Home Button */
+.error-404-screen .retry-btn {
+  background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.error-404-screen .retry-btn:hover {
+  background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 76, 76, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-404-screen h1 {
+    font-size: 2.2rem;
+  }
+  .error-404-screen p {
+    font-size: 1rem;
+  }
+  .error-404-screen .retry-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}

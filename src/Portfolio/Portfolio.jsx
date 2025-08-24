@@ -396,11 +396,16 @@ function Portfolio(props) {
                  <button className="project-btn">Access</button> 
               </Link>
             </div>
+            
             <div className="project">
+              <Link to="/ctf" className='project-card'>
               <img className="projectbg" src={proj3} alt="Project 3" />
               <h3 className="h3col">CTF</h3>
               <p className="ptext">Hands-on Expertise</p>
+                <button className="project-btn">Access</button> 
+              </Link>
             </div>
+            
           </div>
         </div>
       </section>

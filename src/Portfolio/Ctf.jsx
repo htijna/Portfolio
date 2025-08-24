@@ -2,10 +2,10 @@ import React from "react";
 import "./Ctools.css";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
-import ctool1 from "./img/ctool.png";
-import ctool2 from "./img/ctool2.jpeg";
-import ctool3 from "./img/soon.png";
-import ctool4 from "./img/soon.png";
+import ctf1 from "./img/ctfp1.jpg";
+import ctf2 from "./img/ctfp2.jpeg";
+import ctf3 from "./img/ctfp3.jpeg";
+import ctf4 from "./img/ctfp4.jpeg";
 
 const ToolCard = ({ image, subtitle, description }) => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const ToolCard = ({ image, subtitle, description }) => {
   );
 };
 
-const Ctools = () => {
+const Ctf = () => {
   return (
     <div>
       <Navbar />
@@ -43,22 +43,22 @@ const Ctools = () => {
 
       <div className="toolcontainer">
         <ToolCard
-          image={ctool1}
+          image={ctf1}
           subtitle="Infogather"
           description="Professional OSINT-driven tool for effective intelligence gathering and reporting."
         />
         <ToolCard
-          image={ctool2}
+          image={ctf2}
           subtitle="ThreatEye"
           description="Scans systems to detect and identify malicious code in real time."
         />
         <ToolCard
-          image={ctool3}
+          image={ctf3}
           subtitle="Premium"
           description="Coming soon..."
         />
         <ToolCard
-          image={ctool4}
+          image={ctf4}
           subtitle="Economy"
           description="Coming soon..."
         />
@@ -67,4 +67,4 @@ const Ctools = () => {
   );
 };
 
-export default Ctools;
+export default Ctf;
