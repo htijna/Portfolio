@@ -1,11 +1,12 @@
 import React from "react";
-import "./Ctools.css";
+import "./ctf.css";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
-import ctf1 from "./img/ctfp1.jpg";
-import ctf2 from "./img/ctfp2.jpeg";
+import ctf1 from "./img/ctfp7.jpeg";
+import ctf2 from "./img/ctfp6.jpeg";
 import ctf3 from "./img/ctfp3.jpeg";
 import ctf4 from "./img/ctfp4.jpeg";
+import soon from "./img/dropping soon.jpeg";
 
 const ToolCard = ({ image, subtitle, description }) => {
   const navigate = useNavigate();
@@ -16,13 +17,13 @@ const ToolCard = ({ image, subtitle, description }) => {
   };
 
   return (
-    <div className="fulltool">
-      <div className="toolcard">
-        <img src={image} className="toolcard-image" alt={subtitle} />
-        <div className="toolcard-content">
-          <p className="toolsubtitle">{subtitle}</p>
-          <p className="tooldescription">{description}</p>
-          <button className="toolsearch-btn" onClick={handleAccess}>
+    <div className="fullctf">
+      <div className="ctfcard">
+        <img src={image} className="ctfcard-image" alt={subtitle} />
+        <div className="ctfcard-content">
+          <p className="ctfsubtitle">{subtitle}</p>
+          <p className="ctfdescription">{description}</p>
+          <button className="ctfsearch-btn" onClick={handleAccess}>
             Access
           </button>
         </div>
@@ -36,31 +37,41 @@ const Ctf = () => {
     <div>
       <Navbar />
 
-      <div className="toolhero-heading">
-        <h1><span>Custom Tools</span></h1>
-        <p>A custom-built tool purposefully designed to meet users' needs</p>
+      <div className="ctfhero-heading">
+        <h1><span>Capture The Flag</span></h1>
+        <p>Push your limits beyond boundaries and master the art of cybersecurity</p>
       </div>
 
-      <div className="toolcontainer">
+      <div className="ctfcontainer">
         <ToolCard
           image={ctf1}
-          subtitle="Infogather"
-          description="Professional OSINT-driven tool for effective intelligence gathering and reporting."
+          subtitle="CyberQuest"
+          description="Conquer challenges, discover knowledge."
         />
         <ToolCard
           image={ctf2}
-          subtitle="ThreatEye"
-          description="Scans systems to detect and identify malicious code in real time."
+          subtitle="Web Exploitation"
+          description="Uncovering and exploiting vulnerabilities."
         />
         <ToolCard
           image={ctf3}
-          subtitle="Premium"
-          description="Coming soon..."
+          subtitle="Steganography "
+          description=" Finding hidden data in files."
         />
         <ToolCard
           image={ctf4}
-          subtitle="Economy"
-          description="Coming soon..."
+          subtitle="Cryptography"
+          description="Breaking and analyzing ciphers."
+        />
+         <ToolCard
+          image={soon}
+          subtitle="Cryptography"
+          description="Breaking and analyzing ciphers."
+        />
+         <ToolCard
+          image={soon}
+          subtitle="Cryptography"
+          description="Breaking and analyzing ciphers."
         />
       </div>
     </div>
