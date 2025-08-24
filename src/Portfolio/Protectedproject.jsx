@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./protectedproject.css";
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
@@ -6,14 +6,17 @@ import { useLocation } from "react-router-dom";
 export default function ProtectedProject() {
   const location = useLocation();
   const section = location.state?.section || "default";
-const API_URL = "https://portfoliobend-production.up.railway.app";
+  const API_URL = "https://portfoliobend-production.up.railway.app";
+
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [timeoutError, setTimeoutError] = useState(false);
-const normalizedSection = section.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  const normalizedSection = section.toLowerCase().replace(/[^a-z0-9]/g, "");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -23,24 +26,26 @@ const normalizedSection = section.toLowerCase().replace(/[^a-z0-9]/g, "");
     }
 
     setLoading(true);
+    setTimeoutError(false);
 
-    // Timeout feature: stop loading if server doesn't respond in 10s
+    // Timeout if server doesn't respond in 10s
     const timeout = setTimeout(() => {
       setLoading(false);
       setTimeoutError(true);
-    }, 10000); // 10 seconds
+    }, 10000);
 
     try {
-const res = await fetch(`${API_URL}/api/unlock`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ section: normalizedSection, password: password.trim() }),
-});
+      const res = await fetch(`${API_URL}/api/unlock`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ section: normalizedSection, password: password.trim() }),
+      });
+
       const data = await res.json();
-      clearTimeout(timeout); // clear timeout if request succeeds
+      clearTimeout(timeout);
 
       if (data.success) {
-        setFadeOut(true); 
+        setFadeOut(true);
         setTimeout(() => {
           window.location.href = data.url;
         }, 800);
@@ -71,17 +76,18 @@ const res = await fetch(`${API_URL}/api/unlock`, {
     );
   }
 
-if (timeoutError) {
-  return (
-    <div className="error-404-screen">
-      <h1>⚠️ Timeout</h1>
-      <p>The server took too long to respond. Please try again later.</p>
-      <button className="retry-btn" onClick={() => window.location.reload()}>
-        Retry
-      </button>
-    </div>
-  );
-}
+  // Timeout screen
+  if (timeoutError) {
+    return (
+      <div className="error-404-screen">
+        <h1>⚠️ Timeout</h1>
+        <p>The server took too long to respond. Please try again later.</p>
+        <button className="retry-btn" onClick={() => window.location.reload()}>
+          Retry
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -91,16 +97,20 @@ if (timeoutError) {
           <h1 className="title">🔒 Secure Access</h1>
           <p className="subtitle">Enter the project password</p>
           <form onSubmit={handleSubmit} className="proform">
-            <input
-              type="password"
-              maxLength="20"
-              placeholder="••••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className={`code-input ${showError ? "error-border" : ""}`}
-            />
-            {error && <p className={`error-toast ${showError ? "show" : ""}`}>{error}</p>}
-            <button type="submit" className="unlock-btn">Unlock</button>
+            <div className="input-wrapper">
+              <input
+                type="password"
+                maxLength="20"
+                placeholder="••••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={`code-input ${showError ? "error-border" : ""}`}
+              />
+              <p className={`error-toast ${showError ? "show" : ""}`}>{error}</p>
+            </div>
+            <button type="submit" className="unlock-btn">
+              Unlock
+            </button>
           </form>
         </div>
       </div>

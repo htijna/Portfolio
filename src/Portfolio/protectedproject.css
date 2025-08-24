@@ -1,13 +1,13 @@
-/* Reset */
+/* 🔹 Reset */
 body {
   margin: 0;
   padding: 0;
   background: #000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #e0faff; /* default text color */
+  color: #e0faff;
 }
 
-/* Lock screen background */
+/* 🔹 Lock screen */
 .lock-screen {
   min-height: 100vh;
   display: flex;
@@ -17,7 +17,7 @@ body {
   padding: 20px;
 }
 
-/* Centered lock box */
+/* 🔹 Centered lock box */
 .lock-box {
   background: rgba(0, 0, 0, 0.85);
   padding: 30px;
@@ -30,11 +30,11 @@ body {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Titles */
+/* 🔹 Titles */
 .title {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #c4eef6; /* softer neon white-blue */
+  color: #c4eef6;
   text-shadow: 0 0 6px #2abbe467, 0 0 12px rgba(0, 200, 255, 0.55);
   margin-bottom: 10px;
 }
@@ -45,14 +45,20 @@ body {
   margin-bottom: 20px;
 }
 
-/* Form layout */
+/* 🔹 Form */
 .proform {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Input styling */
+/* 🔹 Input wrapper for floating error */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* 🔹 Input */
 .code-input {
   background: #111;
   border: 2px solid #2abbe467;
@@ -73,10 +79,10 @@ body {
   box-shadow: 0 0 15px #2abbe467, 0 0 25px rgba(0, 247, 255, 0.6);
 }
 
-/* Unlock button */
+/* 🔹 Unlock button */
 .unlock-btn {
   margin-top: 10px;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark sleek gradient */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #e0faff;
   font-weight: 600;
   padding: 12px;
@@ -86,115 +92,59 @@ body {
   cursor: pointer;
   width: 100%;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0, 200, 255, 0.15); /* subtle shadow */
+  box-shadow: 0 4px 12px rgba(0, 200, 255, 0.15);
 }
 
-/* Professional hover effect */
 .unlock-btn:hover {
-  background: linear-gradient(135deg, #496ec0cf, #2abbe467); /* deep neon blue gradient */
+  background: linear-gradient(135deg, #496ec0cf, #2abbe467);
   color: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 200, 255, 0.3);
-  transform: translateY(-2px) scale(1.02); /* smooth lift */
+  transform: translateY(-2px) scale(1.02);
 }
 
-/* Error message styling */
-.error-text {
-  color: #ff4c4c;
-  font-size: 0.9rem;
-  margin-top: 5px;
-  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
-  animation: shake 0.3s ease-in-out;
-}
-
-/* Red border if error */
-.error-border {
-  border-color: #ff4c4c !important;
-  box-shadow: 0 0 10px #ff4c4c !important;
-}
-
-/* Input shake animation */
-@keyframes shake {
-  0% { transform: translateX(0px); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0px); }
-}
-
-/* Project page after unlock */
-.project-page {
-  background: #000;
-  color: #e0faff;
-  min-height: 100vh;
-  padding: 30px;
-  text-align: center;
-}
-
-.project-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #e0faff;
-  text-shadow: 0px 0px 10px rgba(0, 200, 255, 0.55);
-  margin-bottom: 20px;
-}
-
-/* Fade animation for lock box */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 🔹 Responsive design */
-@media (max-width: 768px) {
-  .lock-box {
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .code-input {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-
-  .unlock-btn {
-    font-size: 1rem;
-    padding: 10px;
-  }
-}
-
-
-/* Error Toast Styling */
+/* 🔹 Error toast message */
 .error-toast {
-  margin-top: 12px;
-  padding: 10px 15px;
-  border-radius: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 6px;
   background: rgba(255, 0, 60, 0.15);
   color: #ff4d6d;
-  font-size: 14px;
+  font-size: 0.85rem;
   font-weight: 500;
   text-align: center;
   opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.4s ease;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
 }
 
-/* When showing */
 .error-toast.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Loading Screen */
+/* 🔹 Input shake on wrong password */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.code-input.error-shake {
+  animation: shake 0.4s ease-in-out;
+  border-color: #ff4c4c !important;
+  box-shadow: 0 0 10px #ff4c4c !important;
+}
+
+/* 🔹 Loading screen */
 .loading-screen {
   display: flex;
   flex-direction: column;
@@ -202,11 +152,11 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: #000; /* black background */
-  color: #00f0ff; /* neon blue text */
+  background: #000;
+  color: #00f0ff;
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
-  transition: opacity 0.8s ease-in-out; /* smooth fade */
+  transition: opacity 0.8s ease-in-out;
 }
 
 .loading-screen.fade-out {
@@ -226,9 +176,7 @@ body {
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 .loading-text {
@@ -236,7 +184,8 @@ body {
   font-size: 1rem;
   margin-top: 10px;
 }
-/* Timeout / 404 Screen */
+
+/* 🔹 Timeout / 404 screen */
 .error-404-screen {
   display: flex;
   flex-direction: column;
@@ -245,7 +194,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: #000;
-  color: #ff4c4c; /* red neon */
+  color: #ff4c4c;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 20px;
@@ -266,7 +215,6 @@ body {
   text-shadow: 0 0 6px #ff4c4c;
 }
 
-/* Retry / Home Button */
 .error-404-screen .retry-btn {
   background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
   color: #fff;
@@ -286,16 +234,19 @@ body {
   box-shadow: 0 6px 20px rgba(255, 76, 76, 0.5);
 }
 
-/* Responsive */
+/* 🔹 Fade animation for lock box */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Responsive design */
 @media (max-width: 768px) {
-  .error-404-screen h1 {
-    font-size: 2.2rem;
-  }
-  .error-404-screen p {
-    font-size: 1rem;
-  }
-  .error-404-screen .retry-btn {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-  }
+  .lock-box { padding: 20px; border-radius: 10px; }
+  .title { font-size: 1.5rem; }
+  .code-input { font-size: 1rem; letter-spacing: 2px; }
+  .unlock-btn { font-size: 1rem; padding: 10px; }
+  .error-404-screen h1 { font-size: 2.2rem; }
+  .error-404-screen p { font-size: 1rem; }
+  .error-404-screen .retry-btn { padding: 10px 20px; font-size: 0.95rem; }
 }
