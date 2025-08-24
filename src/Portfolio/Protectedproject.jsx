@@ -91,7 +91,7 @@ if (timeoutError) {
         <div className="lock-box">
           <h1 className="title">🔒 Secure Access</h1>
           <p className="subtitle">Enter the project password</p>
-          <form onSubmit={handleSubmit} className="form">
+          <form onSubmit={handleSubmit} className="proform">
             <input
               type="password"
               maxLength="20"

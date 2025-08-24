@@ -5,11 +5,11 @@ import Navbar from "./Navbar";
 import web1 from './img/ecog2.png';
 import web2 from './img/dresscode.png'
 import web3 from './img/flames1.jpeg'
-import ctool4 from './img/soon.png'
+import cweb4 from './img/soon.png'
 
 import { LiawebprojectsSolid } from "react-icons/lia";
 import { useNavigate } from "react-router-dom";
-const ToolCard = ({ image, subtitle, description }) => {
+const WebCard = ({ image, subtitle, description }) => {
    const navigate = useNavigate();
 
   const handleAccess = () => {
@@ -19,15 +19,15 @@ const ToolCard = ({ image, subtitle, description }) => {
   return (
     <div>
       <Navbar/>
-    <div className="fulltool">
-      <div className="toolcard">
-        <img src={image}  className="toolcard-image" />
-        <div className="toolcard-content">
+    <div className="fullweb">
+      <div className="webcard">
+        <img src={image}  className="webcard-image" />
+        <div className="webcard-content">
          
-          <p className="webprojectsubtitle">{subtitle}</p>
-          <p className="tooldescription">{description}</p>
+          <p className="websubtitle">{subtitle}</p>
+          <p className="webdescription">{description}</p>
         
-          <button className="webprojectsearch-btn" onClick={handleAccess}>Access</button>
+          <button className="websearch-btn" onClick={handleAccess}>Access</button>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ const Webprojects = () => {
   return (
     <div>
       {/* 🔹 Hero Heading */}
-      <div className="toolhero-heading">
+      <div className="webhero-heading">
         <h1>
       
           <span>Web Projects</span>
@@ -48,14 +48,14 @@ const Webprojects = () => {
       </div>
 
       {/* 🔹 Cards */}
-      <div className="toolcontainer">
-        <ToolCard
+      <div className="webcontainer">
+        <WebCard
           image={web1}
           subtitle="Eco-G"
           description="Ecog is a direct farmer-to-consumer platform delivering fresh, organic produce while empowering farmers with fair pricing."
          
         />
-        <ToolCard
+        <WebCard
           image={web2}
           
           subtitle="Dresscode"
@@ -63,7 +63,7 @@ const Webprojects = () => {
           price="$450"
           airport="MLE"
         />
-        <ToolCard
+        <WebCard
           image={web3}
          
           subtitle="Flames"
@@ -71,38 +71,24 @@ const Webprojects = () => {
           price="$600"
           airport="HND"
         />
-        <ToolCard
-          image={ctool4}
+        <WebCard
+          image={cweb4}
           
           subtitle="P1"
           description="Website version is v2 , compatibility below android 13 ... "
           price="$300"
           airport="CDG"
         />
-          <ToolCard
-          image={ctool4}
+          <WebCard
+          image={cweb4}
           
           subtitle="P1"
           description="Website version is v2 , compatibility below android 13 ... "
           price="$300"
           airport="CDG"
         />
-          <ToolCard
-          image={ctool4}
-          
-          subtitle="P1"
-          description="Website version is v2 , compatibility below android 13 ... "
-          price="$300"
-          airport="CDG"
-        />
-          <ToolCard
-          image={ctool4}
-          
-          subtitle="P1"
-          description="Website version is v2 , compatibility below android 13 ... "
-          price="$300"
-          airport="CDG"
-        />
+      
+        
       </div>
     </div>
   );

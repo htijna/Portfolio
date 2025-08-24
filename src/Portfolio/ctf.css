@@ -58,7 +58,13 @@
 .fullctf {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 20px; /* default for PC */
+}
+
+@media (max-width: 480px) {
+  .fullctf {
+    padding: 30px; /* increase for mobile */
+  }
 }
 
 .ctfcontainer {
